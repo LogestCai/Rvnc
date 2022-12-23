@@ -1,0 +1,93 @@
+{__NOLAYOUT__}
+{include file="front_public/header"}
+<style>
+    body{
+        font-size: 16px;
+    }
+    img{
+        max-width: 100%;!important;
+    }
+    p>a{
+        color:blue;!important;
+    }
+
+    #test-markdown-view{
+        margin-bottom: 20px;
+    }
+
+</style>
+</head>
+<body style="background-color:#f5f5f5">
+    {/* 引入导航界面 */}
+    {include file="front_public/nav"}
+
+    <div class="layui-container" style="background-color: white;margin-top: 5px">
+        <div class="layui-row " style="padding-top: 10px">
+            <div class="layui-col-md12" style="display: none">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <div class="layui-input-black">
+                            <input type="text" name="title" required style="border: solid 1px green;border-radius: 10px"  lay-verify="required" placeholder="请输入关键词进行搜索，回车提交查询" autocomplete="off" class="layui-input layui-layer-border layui-circle">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="layui-row">
+            <div class="layui-col-md12">
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                    <legend><a class="layui-btn  layui-btn-normal layui-btn-radius" href="/index/index/index">< 返回专栏页</a></legend>
+                </fieldset>
+                    <div id="test-markdown-view">
+                        <textarea style="display:none;">{$row.content|html_entity_decode|default=''}</textarea>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+        var element = layui.element;
+
+        //…
+    });
+</script>
+<script>
+    //Demo
+    layui.use('form', function(){
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="__STATIC__/plugs/editormd/lib/marked.min.js"></script>
+<!-- 第三方界面样式文件google -->
+<script src="__STATIC__/plugs/editormd/lib/google-code-prettify/prettify.js"></script>
+<script src="__STATIC__/plugs/editormd/lib/raphael.min.js"></script>
+<script src="__STATIC__/plugs/editormd/lib/underscore.min.js"></script>
+<script src="__STATIC__/plugs/editormd/lib/sequence-diagram.min.js"></script>
+<script src="__STATIC__/plugs/editormd/lib/flowchart.min.js"></script>
+<script src="__STATIC__/plugs/editormd/editormd.js"></script>
+<script src="__STATIC__/plugs/editormd/plugins/editormd-image-past.js"></script>
+<script src="__STATIC__/plugs/editormd/lib/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var testView = editormd.markdownToHTML("test-markdown-view", {
+            // markdown : "[TOC]\n### Hello world!\n## Heading 2", // Also, you can dynamic set Markdown text
+            // htmlDecode : true,  // Enable / disable HTML tag encode.
+             //htmlDecode : "style,script,iframe",  // Note: If enabled, you should filter some dangerous HTML tags for website security.
+            htmlDecode : "style,script,iframe,sub,video,source,sup|on*"  // Filter tags, and all on* attributes
+        });
+    });
+</script>
+
+{/*引入底部js文件*/}
+{include file="front_public/footerjs"}
+

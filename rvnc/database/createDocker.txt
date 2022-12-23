@@ -1,0 +1,2 @@
+docker run --name mysql57 -p 3306:3306 -v /data/dockerData/mysql57:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Cmm@111111 -d mysql:5.7
+docker exec -i mysql57 sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' < ./devManager.sql

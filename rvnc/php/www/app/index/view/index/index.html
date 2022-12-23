@@ -1,0 +1,106 @@
+{__NOLAYOUT__}
+{include file="front_public/header"}
+<style>
+    img{
+        max-width: 100%;!important;
+    }
+    p>a{
+        color:blue;!important;
+    }
+    .art_list{ display: flex; border-bottom:3px dashed #f4f4f4; justify-content: space-between;margin-bottom: 20px}
+    .art_list .txt{ display: flex; flex-direction:column; justify-content: space-between;}
+    .art_title{ font-size: 20px;}
+    .art_list .info{ font-size: 16px; color:#888}
+    .art_list_txt{font-size:16px;margin-left: 30px}
+    .site-banner{background-color: #3a4e9e;}
+
+</style>
+</head>
+<body style="background-color:#f5f5f5">
+    {/* 引入导航界面 */}
+    {include file="front_public/nav"}
+
+    <div class="site-banner">
+        <div class="site-banner-bg">
+        </div>
+        <div class="site-banner-main">
+            <div class="site-zfj">
+                <i class="layui-icon layui-icon-chart-screen" style="color: #db24ff;"></i>
+            </div>
+            <div class="layui-anim site-desc">
+                <p class="web-font-desc">办公助手-让办公更高效</p>
+                <cite></cite>
+            </div>
+            <div class="site-download">
+                <!-- a href="/docs" class="layui-btn layui-btn-lg">
+                    使用文档
+                </a -->
+                <a href="/setup.exe" class="layui-btn layui-btn-lg layui-btn-primary layui-border-green" ><i class="layui-icon layui-icon-download-circle" style="font-size: 28px;color: #070907;"></i>
+                    立即下载
+                </a>
+                <a href="/DotNet4.exe" class="layui-btn layui-btn-lg layui-btn-normal layui-border-green" >
+                    运行环境下载
+                </a>
+            </div>
+            <div class="site-version">
+                <span>让远程管理更省心！</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="layui-container">
+        <ul class="layui-row layui-col-space30 site-idea">
+            <li class="layui-col-md4">
+                <div>
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>高效便捷</legend>
+                        <p>办公助手是一款简洁高效的办公管理软件，集成远程管理、设备管理等功能，方便企业运维管理人员高效的管理终端设备。节约了大量奔波时间，简化了服务流程。</p>
+                    </fieldset>
+                </div>
+            </li>
+            <li class="layui-col-md4">
+                <div>
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>一键远程</legend>
+                        <p>客户端具有一键远程求助功能，可以方便用户快速联系后台管理员。客户端主界面重要信息一目了然，极大地降低了运维人员同用户人员沟通成本</p>
+                    </fieldset>
+                </div>
+            </li>
+            <li class="layui-col-md4">
+                <div>
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>设备报修</legend>
+                        <p>支持终端报修功能，可在本机快速发起故障报修服务，服务工单自动派送至后台运维人员，实现设备维修的全流程追溯！支持报修其他设备、打印机、网络等故障。</p>
+                    </fieldset>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="layui-footer footer footer-index">
+        <p>
+            Copyright © 2022 <a href="/">办公助手</a> MIT Licensed</p>
+        <p id="LAY-footer-info">
+            <a href="/" rel="nofollow" target="_blank">免责声明</a>
+            <a href="/" rel="nofollow" target="_blank">开源协议</a>
+            <a href="/" target="_blank" rel="nofollow">皖ICP备2021008900号</a></p>
+        <p>
+    <span>
+
+    </span>
+        </p>
+    </div>
+</body>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+        var element = layui.element;
+
+        //…
+    });
+</script>
+
+{/*引入底部js文件*/}
+{include file="front_public/footerjs"}
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>患者回访管理系统</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="/static/admin/css/public.css?v=1663739910" media="all">
+
+    <script>
+        window.CONFIG = {
+            ADMIN: "admin",
+            CONTROLLER_JS_PATH: "admin/js/login.js",
+            ACTION: "index",
+            AUTOLOAD_JS: "1",
+            IS_SUPER_ADMIN: "",
+            VERSION: "1663739910",
+        };
+    </script>
+    <script src="/static/plugs/layui-v2.5.6/layui.all.js?v=1663739910" charset="utf-8"></script>
+    <script src="/static/plugs/require-2.3.6/require.js?v=1663739910" charset="utf-8"></script>
+    <script src="/static/config-admin.js?v=1663739910" charset="utf-8"></script>
+
+
+
+</head>
+<body>
+<link rel="stylesheet" href="/static/admin/css/login.css?v=1663739910" media="all">
+
+<div class="main-body">
+    <div class="logo-img">
+        <img src="/static/admin/images/hbjkjtyy.png" alt="" style="width:100%">
+    </div>
+    <div class="login-main">
+        <div class="login-top">
+            <span>患者回访管理系统</span>
+            <span class="bg1"></span>
+            <span class="bg2"></span>
+        </div>
+
+        <form class="layui-form login-bottom">
+            <div class="center">
+
+                <div class="item">
+                    <span class="icon icon-2"></span>
+                    <input type="text" name="username" lay-verify="required"  placeholder="请输入登录账号" maxlength="24"/>
+                </div>
+
+                <div class="item">
+                    <span class="icon icon-3"></span>
+                    <input type="password" name="password" lay-verify="required"  placeholder="请输入密码" maxlength="20">
+                    <span class="bind-password icon icon-4"></span>
+                </div>
+
+                
+            </div>
+            <div class="tip">
+                <span class="icon-nocheck"></span>
+                <span class="login-tip">保持登录</span>
+                <a href="javascript:" class="bind-phone" style="color:blue" >  绑定手机号</a>
+            </div>
+            <div class="layui-form-item" style="text-align:center; width:100%;height:100%;margin:0px;">
+                <button class="login-btn" lay-submit>立即登录</button>
+            </div>
+            <div class="layui-form-item">
+                <div class="footer-small">
+                    Designed By 信息中心
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div class="footer layui-show-md-block layui-show-lg-block layui-hide-sm layui-hide-xs">
+    ©版权所有 2022 Designed By 信息中心<span class="padding-5"></span>
+</div>
+
+<script>
+    layui.use(['upload','jquery','element','table' ], function(){
+        var $ = layui.jquery;
+        //===================绑定手机号功能======================
+        $('body').on('click','.bind-phone',function(){
+            var index = layer.open({
+                title: "绑定账号",
+                type: 2,
+                area: ['70%', '80%'],
+                content: "/admin/login/editUser",
+                maxmin: true,
+                moveOut: true,
+                success: function (layero, index) {
+                    var body = layer.getChildFrame('body', index);
+                    if (body.length > 0) {
+                        $.each(body, function (i, v) {
+                            // todo 优化弹出层背景色修改
+                            $(v).before('<style>\n' +
+                                'html, body {\n' +
+                                '    background: #ffffff;\n' +
+                                '}\n' +
+                                '</style>');
+                        });
+                    }
+                }
+            });
+        })
+
+    })
+</script>
+
+
+
+</body>
+</html>

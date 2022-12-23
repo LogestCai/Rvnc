@@ -1,0 +1,162 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{:sysconfig('site','site_name')}</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="__STATIC__/admin/css/public.css?v={$version}" media="all">
+
+    <script>
+        window.CONFIG = {
+            ADMIN: "{$adminModuleName|default='admin'}",
+            CONTROLLER_JS_PATH: "{$thisControllerJsPath|default=''}",
+            ACTION: "{$thisAction|default=''}",
+            AUTOLOAD_JS: "{$autoloadJs|default='false'}",
+            IS_SUPER_ADMIN: "{$isSuperAdmin|default='false'}",
+            VERSION: "{$version|default='1.0.0'}",
+        };
+    </script>
+
+    <!-- 引入editormd样式文件 -->
+    <link rel="stylesheet" href="__STATIC__/plugs/editormd/css/editormd.css" >
+    <!-- 引入editormd样式文件 -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="__STATIC__/plugs/editormd/editormd.js"></script>
+    <script src="__STATIC__/plugs/editormd/plugins/editormd-image-past.js"></script>
+    <script src="__STATIC__/plugs/layui-v2.5.6/layui.all.js?v={$version}" charset="utf-8"></script>
+</head>
+<body>
+
+<div class="layuimini-container">
+    <div class="layui-progress" style="margin-bottom: 10px">
+        <div class="layui-progress-bar layui-bg-green" lay-percent="10%"></div>
+    </div>
+
+    <form id="app-form" class="layui-form">
+        <input type="hidden" id="app-form-id" name="id" value="">
+        <div class="layui-row">
+            <div class="layui-col-xs8 layui-col-sm8 layui-col-md9 ">
+                <div class="layui-input-block" style="margin:0">
+                    <input name="title" id="app-form-title"  lay-verify="title" class="layui-input" placeholder="请输入文章标题" value="" />
+                </div>
+            </div>
+            <div class="layui-col-xs4 layui-col-sm4 layui-col-md3 ">
+                <div class="layui-form-item text-center" style="text-align: right">
+                    <button type="submit" style="display: inline" class="layui-btn layui-bg-black" lay-submit  lay-filter="demo1"><i class="fa fa-save"></i> &nbsp;保存文章</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <div class="layui-input-block" style="margin:0">
+                <div id="mkdown" >
+                    <textarea id="app-form-content" name="content" lay-verify="content" ></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    //var total = document.documentElement.clientHeight;
+   // total=total-200;
+    //document.getElementById("mkdown").style.height=total-+"px";
+    $(function(){
+        var editor = editormd("mkdown", {
+            height:'600px',
+            syncScrolling : "single",
+            emoji:true,
+            //启动本地图片上传功能
+            imageUpload: true,
+            watch:true,
+           // toolbarIcons : "simple",
+            imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp","zip","rar","pdf"]
+            //htmlDecode : true // Decode all html tags & attributes
+            ,htmlDecode : "style,script,iframe,sub,video,source,sup|on*"  // Filter tags, and all on* attributes
+            ,path   : "__STATIC__/plugs/editormd/lib/",
+            imageUploadURL : "/admin/ajax/uploadMarkdown", //文件提交请求路径
+            onload : function() {
+                initPasteDragImg(this); //配置图片粘贴上传
+            },
+            //saveHTMLToTextarea : true, //注意3：这个配置，方便post提交表单
+            //previewTheme : "dark",//预览主题样式 黑色
+        });
+    })
+
+    layui.use(['form', 'layedit','element', 'laydate'], function () {
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate
+            , element = layui.element;
+
+        //自定义验证规则
+        form.verify({
+            title: function (value) {
+                if (value.length < 5) {
+                    return '标题至少得5个字符啊';
+                }
+            }
+            , content: [
+                /./
+                , '内容不能为空'
+            ]
+        });
+        //监听提交
+        form.on('submit(demo1)', function (data) {
+            var dd = data.field;
+           // console.log(JSON.stringify(data.field));
+           // layer.alert(dd.title,{'title':"这是提交的信息"})
+            $.ajax({
+                'type': 'post',
+                'url': '/admin/article.article/add',
+                dataType: 'json',
+                data: dd,
+                success: function (data) {
+                    layer.msg(
+                        data.msg
+                        ,{
+                            icon: 1,
+                            time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                        }
+                         ,function(){
+                        parent.location.reload();
+                    })
+                }
+            })
+            return false;
+        });
+    });
+
+    //自动保存功能
+    //let timerId = setInterval(()=>{callback(timerId)},3000);
+    function autoSaveContent(){
+       var id      = $("#app-form-id").val();
+       var title   = $("#app-form-title").val();
+       var content = $("#app-form-content").val();
+       if(title != '' && content != ''){
+           $.ajax({
+               'type':'post',
+               'url':'/admin/article.article/autoSave',
+               'dataType':'json',
+               'data':{"id":id,"title":title,"content":content},
+               success:function(dd){
+                   // $("#app-form-id").val('1');
+                   //console.log(dd);
+                   $("#app-form-id").val(dd.data.id);
+               }
+           })
+       }
+    }
+    //设置每10秒保存一下
+    window.setInterval(autoSaveContent, 1000*10);
+</script>
+</body>
+</html>

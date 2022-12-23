@@ -1,0 +1,5 @@
+E:\医院\工作文件\医院信息化建设\2022年\20220929企业运维管理系统开发\企业运维管理系统\DevManager\BaseInfo\bin\Debug\BaseInfo.dll
+E:\医院\工作文件\医院信息化建设\2022年\20220929企业运维管理系统开发\企业运维管理系统\DevManager\BaseInfo\bin\Debug\BaseInfo.pdb
+E:\医院\工作文件\医院信息化建设\2022年\20220929企业运维管理系统开发\企业运维管理系统\DevManager\BaseInfo\obj\Debug\BaseInfo.dll
+E:\医院\工作文件\医院信息化建设\2022年\20220929企业运维管理系统开发\企业运维管理系统\DevManager\BaseInfo\obj\Debug\BaseInfo.pdb
+E:\医院\工作文件\医院信息化建设\2022年\20220929企业运维管理系统开发\企业运维管理系统\DevManager\BaseInfo\obj\Debug\BaseInfo.csprojResolveAssemblyReference.cache

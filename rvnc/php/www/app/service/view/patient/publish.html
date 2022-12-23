@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="__STATIC__/plugs/lay-module/inputTags/inputTags.css?v={$version}" media="all">
+<style>
+    #tags{
+        display: block;
+        position: relative;
+        //padding-left: 10px;
+        padding: 0;
+        margin-left: 130px;
+        min-height: 36px;
+    }
+
+</style>
+<div class="layuimini-container">
+    <form id="app-form" class="layui-form layuimini-form">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">文章标题</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input" disabled value="{$row.title|default=''}" readonly>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">栏目</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="like[write]" lay-skin="primary" title="写作">
+                <input type="checkbox" name="like[read]" lay-skin="primary" title="阅读">
+                <input type="checkbox" name="like[read1]" lay-skin="primary" title="阅读1">
+                <input type="checkbox" name="like[read2]" lay-skin="primary" title="阅读2">
+            </div>
+        </div>
+
+        <div class="layui-form-item " >
+            <label class="layui-form-label">标签</label>
+            <div class="layui-input-block tags " id="tags">
+                <input type="text" id="inputTags" class="layui-input" >
+            </div>
+        </div>
+
+
+
+        <div class="hr-line"></div>
+        <div class="layui-form-item text-center">
+            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit>确认</button>
+            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+        </div>
+
+    </form>
+</div>
+

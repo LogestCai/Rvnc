@@ -1,0 +1,233 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{:sysconfig('site','site_name')}</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="__STATIC__/admin/css/public.css?v={$version}" media="all">
+
+    <script>
+        window.CONFIG = {
+            ADMIN: "{$adminModuleName|default='admin'}",
+            CONTROLLER_JS_PATH: "{$thisControllerJsPath|default=''}",
+            ACTION: "{$thisAction|default=''}",
+            AUTOLOAD_JS: "{$autoloadJs|default='false'}",
+            IS_SUPER_ADMIN: "{$isSuperAdmin|default='false'}",
+            VERSION: "{$version|default='1.0.0'}",
+        };
+    </script>
+
+
+    <!-- 引入editormd样式文件 -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="__STATIC__/plugs/layui-v2.5.6/layui.all.js?v={$version}" charset="utf-8"></script>
+    <style>
+        .demo-tree-box {
+            width: 100%;
+            margin: 10px;
+            border: 1px solid dodgerblue;
+            border-radius: 10px;
+            overflow:auto;
+            min-height: 500px;
+        }
+
+        .current .layui-tree-main>span{
+            font-weight: bold;
+            color: red;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(0,0,0,.1);
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="layui-row">
+        <div class="layui-col-md2 layui-col-sm3" style="padding: 20px">
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+
+            </fieldset>
+            <div class="layui-inline">
+                <input id="keywords" type="text" name="title" style="width:100%;border-radius: 10px;border:1px solid dodgerblue" placeholder="关键字" class="layui-input">
+            </div>
+            <div id="test13" class="demo-tree demo-tree-box">
+
+            </div>
+        </div>
+        <div class="layui-col-md10 layui-col-md9" style="padding: 20px;">
+            <fieldset id="searchFieldset_currentTableRenderId" class="table-search-fieldset " style="margin-top: 30px;">
+            <legend>条件搜索</legend>
+            <form class="layui-form layui-form-pane form-search">
+
+                {/*创建自动表单*/}
+                {/*:create_form($formData,3)*/}
+
+                <div class="layui-form-item text-center" style="margin-left: 115px">
+                    <button type="submit" class="layui-btn layui-btn-normal" data-type="tableSearch" data-table="currentTableRenderId" lay-submit="" lay-filter="currentTableRenderId_filter"> 搜 索</button>
+                    <button type="reset" class="layui-btn layui-btn-primary" data-table-reset="currentTableRenderId"> 重 置 </button>
+                </div>
+            </form>
+        </fieldset >
+            <table class="layui-hide" id="test"></table>
+        </div>
+    </div>
+
+
+<script>
+
+
+    layui.use(['form', 'layedit','element', 'laydate','tree', 'util'], function () {
+        var form = layui.form
+            , layer = layui.layer
+            ,tree = layui.tree
+            ,util = layui.util
+            , layedit = layui.layedit
+            , laydate = layui.laydate
+            , element = layui.element;
+        let groupId = 1;
+        //模拟数据1
+        data1 = [{
+            title: '全部'
+            ,id: 1
+            ,spread:true
+            ,children: [{
+                title: '信息科'
+                ,id: 1000
+
+            },{
+                title: '设备科'
+                ,id: 1001
+            },{
+                title: '分院内科'
+                ,id: 1002
+            }
+                ,{
+                    title: '泌尿外科'
+                    ,id: 1002
+                }
+                ,{
+                    title: '骨科'
+                    ,id: 1002
+                }
+                ,{
+                    title: '脑外科'
+                    ,id: 1002
+                }]
+        }];
+
+        //无连接线风格
+        tree.render({
+            elem: '#test13'
+            ,data: data1
+            ,accordion:true
+            ,showLine: true  //是否开启连接线
+            ,click: function(obj){
+                console.log(obj.data); // 得到当前点击的节点数据
+                groupId = data.id;
+
+            }
+        });
+        /// ===============树的搜索功能
+        // treeId: tree所在的容器的id
+// filter: 对应的搜索框的selector或者dom对象
+// callback: 回调 参数(树节点jquery对象, 输入框对象, 匹配到的节点数量)
+        tree.syncLayuiTreeFilter = function (treeId, filter, callback) {
+            let treeElem = $('#' + treeId), filterElem = $(filter);
+            if (!filterElem.length || !filterElem.length) {
+                return;
+            }
+            // 搜索框的监听事件按实际需求来
+            filterElem.unbind('change').change(function () {
+                let that = this; //this;
+                let value = $(that).val().trim();
+                let HIDE = 'layui-hide';
+                let hintClass = 'search_hit';
+                // 先恢复现场
+                treeElem.find('.' + HIDE).removeClass(HIDE);
+                treeElem.find('.' + hintClass).removeClass(hintClass)
+                // 如果有值筛选开始
+                if (value) {
+                    $.each(treeElem.find('.layui-tree-txt'), function (index, elem) {
+                        elem = $(elem);
+                        let textTemp = elem.text();
+                        if (textTemp.indexOf(value) === -1) {
+                            // 不存在就隐藏
+                            elem.closest('.layui-tree-set').addClass(HIDE)
+                        } else {
+                            // 命中就添加一个class
+                            elem.addClass(hintClass)
+                        }
+                    });
+                    $.each(treeElem.find('.' + hintClass), function (index, elem) {
+                        elem = $(elem);
+                        // 取消隐藏所有父节点
+                        elem.parents('.layui-tree-set').removeClass(HIDE);
+                        // 展开所有父节点
+                        elem.parents('.layui-tree-set').each(function (i, item) {
+                            if (!$(item).hasClass('layui-tree-spread')) {
+                                $(item).find('.layui-tree-iconClick :first').click();
+                            }
+                        });
+                    });
+                }
+                typeof callback === 'function' && callback.call(that, treeElem, filterElem, treeElem.find('.' + hintClass).length);
+            });
+        };
+
+        tree.syncLayuiTreeFilter('test13','#keywords',function (treeElem, filterElem, hitNumbers) {
+            console.log('hitNumbers', hitNumbers);
+            layer.msg('找到' + hitNumbers + '个节点');
+        });
+
+  // ===============设置表单数据===============================
+        var table = layui.table;
+
+        table.render({
+            elem: '#test'
+            ,url:'https://layuion.com/static/json/table/user.json'
+            ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            ,page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+                layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+                //,curr: 5 //设定初始在第 5 页
+                ,groups: 1 //只显示 1 个连续页码
+                ,first: false //不显示首页
+                ,last: false //不显示尾页
+
+            }
+            ,cols: [[
+                {field:'id', title: 'ID', sort: true}
+                ,{field:'username', title: '用户名'} //width 支持：数字、百分比和不填写。你还可以通过 minWidth 参数局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                ,{field:'sex', title: '性别', sort: true}
+                ,{field:'city', title: '城市'}
+                ,{field:'sign', title: '签名'}
+                ,{field:'classify', title: '职业', align: 'center'} //单元格内容水平居中
+                ,{field:'experience', title: '积分', sort: true, align: 'right'} //单元格内容水平居右
+                ,{field:'score', title: '评分', sort: true, align: 'right'}
+                ,{field:'words', title: '字数', sort: true, align: 'right'}
+            ]]
+        });
+
+
+        // =================点击修改样式===================================
+        // 树点击样式修改
+        $("body").on("click", ".layui-tree-txt", function () {
+            $(".layui-tree-entry").removeClass("current");
+            $(this).parent().parent().addClass("current");
+        });
+
+
+
+    });
+
+
+</script>
+</body>
+</html>

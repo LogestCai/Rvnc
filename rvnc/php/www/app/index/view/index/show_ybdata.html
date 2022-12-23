@@ -1,0 +1,243 @@
+{__NOLAYOUT__}
+{include file="front_public/header"}
+<style>
+    img{
+        max-width: 100%;!important;
+    }
+    p>a{
+        color:blue;!important;
+    }
+</style>
+</head>
+<body>
+    {/* 引入导航界面 */}
+    {include file="front_public/nav"}
+
+    <div class="layui-fluid">
+        <div class="layui-row">
+            <div class="layui-col-md12" style="padding-top: 10px">
+                <fieldset class="layui-elem-field">
+                    <legend>检索条件</legend>
+                    <div class="layui-field-box">
+                        <form class="layui-form layui-form-pane form-search">
+
+                            <div class="layui-form-item layui-inline">
+                                <label class="layui-form-label">类别</label>
+                                <div class="layui-input-inline">
+                                    <select class="layui-select" id="c-xmlb"  name="项目类别" data-search-op="=">
+                                        <option value="">全部</option>
+                                        <option value="卫材">卫材</option>
+                                        <option value="项目">项目</option>
+                                        <option value="药品">药品</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-inline">
+                                <label class="layui-form-label">项目名称</label>
+                                <div class="layui-input-inline">
+                                    <input id="c-xmmc" name="项目名称" data-search-op="range" value="" placeholder="输入项目名称检索" class="layui-input" lay-key="1">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-inline">
+                                <label class="layui-form-label">项目编码</label>
+                                <div class="layui-input-inline">
+                                    <input id="c-xmbm" name="项目编码" data-search-op="range" value="" placeholder="输入中心项目编码" class="layui-input" >
+                                </div>
+                            </div>
+
+                            <div class="layui-form-item layui-inline" style="margin-left: 115px">
+                                <button type="button" class="layui-btn layui-btn-normal search_button" > 搜 索</button>
+                            </div>
+                        </form>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="layui-row">
+            <div class="layui-col-md12">
+                <table class="layui-hide" id="test" lay-filter="test"></table>
+
+                <script type="text/html" id="toolbarDemo">
+                    <div class="layui-btn-container">
+                        <button class="layui-btn layui-btn-sm" lay-event="getCheckData">新增中心数据</button>
+                        <!--button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
+                        <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button-->
+                    </div>
+                </script>
+
+                <script type="text/html" id="barDemo">
+                    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+        var element = layui.element;
+    });
+</script>
+
+<script>
+    var tableln=null;
+    layui.use(['form','table'], function(){
+        var table = layui.table, form = layui.form;
+         tableln = table.render({
+            elem: '#test'
+             ,method:'post'
+             ,id:'testReload'
+            ,url:'/admin/test/showybdata/'
+            ,toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
+//           // ,defaultToolbar: ['filter', 'exports', 'print', { //自定义头部工具栏右侧图标。如无需自定义，去除该参数即可
+//                title: '提示'
+//                ,layEvent: 'LAYTABLE_TIPS'
+//                ,icon: 'layui-icon-tips'
+//            }]
+            ,title: '中心目录表'
+           //传递额外条件
+           // ,where:{token: 'sasasas', ids: 123}
+            ,cols: [[
+                 {type: 'checkbox', fixed: 'left'}
+                ,{ title:'操作', toolbar: '#barDemo', width:130}
+                ,{ field:'ID', title:'ID', width:150}
+                ,{field:'项目编码', title:'中心项目编码',width:120}
+                ,{field:'项目名称', title:'中心项目名称',width:120}
+                ,{field:'项目类别', title:'中心项目类型', width:100}
+                ,{field:'收费类别', title:'收费类别', width:100}
+                ,{field:'剂型', title:'剂型', width:100}
+                ,{field:'国家目录编码', title:'国家目录编码'}
+                ,{field:'规格', title:'规格',width:90}
+                ,{field:'单位', title:'单位' ,width:90}
+                ,{field:'UDI', title:'备注', width:120}
+                ,{field:'药品厂家', title:'产地', width:120}
+                ,{field:'项目等级', title:'项目等级',width:90}
+                ,{field:'国药准字', title:'国药准字'}
+                ,{field:'药品商品名称', title:'商品名称', width:120}
+                ,{field:'国家目录名称', title:'国家目录名称'}
+            ]]
+            ,page: true
+        });
+
+         //表单搜索事件重置表单并上传条件参数
+        $('.search_button').on('click', function(){
+            tableln.reload( {
+                where: {
+                    '项目类别': $('#c-xmlb').val(),
+                    '项目名称': $('#c-xmmc').val(),
+                    '项目编码': $('#c-xmbm').val()
+                }
+            });
+        });
+
+        //头工具栏事件
+        table.on('toolbar(test)', function(obj){
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch(obj.event){
+                case 'getCheckData':
+//                    var data = checkStatus.data;
+//                    layer.alert(JSON.stringify(data));
+                    var index = layer.open({
+                        title: "中心目录数据添加",
+                        type: 2,
+                        area: ["70%","85%"],
+                        content: "/admin/test/ybadd",
+                        maxmin: true,
+                        moveOut: true,
+                        method:'post',
+                        success: function (layero, index) {
+                            console.log('aaaa');
+                            var body = layer.getChildFrame('body', index);
+                            if (body.length > 0) {
+                                $.each(body, function (i, v) {
+                                    // todo 优化弹出层背景色修改
+                                    $(v).before('<style>\n' +
+                                        'html, body {\n' +
+                                        '    background: #ffffff;\n' +
+                                        '}\n' +
+                                        '</style>');
+                                });
+                            }
+                        }
+                    });
+                    break;
+                case 'getCheckLength':
+                    var data = checkStatus.data;
+                    layer.msg('选中了：'+ data.length + ' 个');
+                    break;
+                case 'isAll':
+                    layer.msg(checkStatus.isAll ? '全选': '未全选');
+                    break;
+
+                //自定义头工具栏右侧图标 - 提示
+                case 'LAYTABLE_TIPS':
+                    layer.alert('这是工具栏右侧自定义的一个图标按钮');
+                    break;
+            };
+        });
+
+        //监听行工具事件
+        table.on('tool(test)', function(obj){
+            var data = obj.data;
+            //console.log(obj)
+            if(obj.event === 'del'){
+                layer.confirm('真的删除行么', function(index){
+                    obj.del();
+                    layer.close(index);
+                });
+            } else if(obj.event === 'edit'){
+//                layer.prompt({
+//                    formType: 2
+//                    ,value: data.本地项目名称
+//                }, function(value, index){
+//                    obj.update({
+//                        email: value
+//                    });
+//                    layer.close(index);
+//                });
+
+//                layer.open({
+//                    type: 1,
+//                    shade: false,
+//                    title: false, //不显示标题
+//                    content: $('#for_add'), //捕获的元素，注意：最好该指定的元素要存放在body最外层，否则可能被其它的相对元素所影响
+//                    cancel: function(){
+//                        layer.msg('捕获就是从页面已经存在的元素上，包裹layer的结构', {time: 5000, icon:6});
+//                    }
+//                });
+console.log(data);
+                var index = layer.open({
+                    title: "中心目录修改",
+                    type: 2,
+                    area: ["70%","80%"],
+                    content: "/admin/test/ybedit?rowid="+data.ID,
+                    maxmin: true,
+                    moveOut: true,
+                    success: function (layero, index) {
+                        var body = layer.getChildFrame('body', index);
+                        if (body.length > 0) {
+                            $.each(body, function (i, v) {
+                                // todo 优化弹出层背景色修改
+                                $(v).before('<style>\n' +
+                                    'html, body {\n' +
+                                    '    background: #ffffff;\n' +
+                                    '}\n' +
+                                    '</style>');
+                            });
+                        }
+                    }
+                });
+            }
+        });
+
+
+    });
+
+</script>
+
+</html>
+
+
+

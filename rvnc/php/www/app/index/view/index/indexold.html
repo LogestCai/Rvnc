@@ -1,0 +1,304 @@
+{__NOLAYOUT__}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/global.css" media="all">
+
+    <script>
+        window.CONFIG = {
+            ADMIN: "{$adminModuleName|default='admin'}",
+            CONTROLLER_JS_PATH: "{$thisControllerJsPath|default=''}",
+            ACTION: "{$thisAction|default=''}",
+            AUTOLOAD_JS: "{$autoloadJs|default='false'}",
+            IS_SUPER_ADMIN: "{$isSuperAdmin|default='false'}",
+            VERSION: "{$version|default='1.0.0'}",
+        };
+    </script>
+    <!-- 引入 layui.js -->
+    <script src="//unpkg.com/layui@2.6.8/dist/layui.js">
+    <script src="__STATIC__/index/js/global.js" charset="utf-8"></script>
+</head>
+<body >
+<div class="layui-header header header-about">
+    <div class="layui-container">
+        <a class="logo" href="/">
+            <img src="//res.layui.com/static/images/layui/logo.png" alt="layui">
+        </a>
+
+        <ul class="layui-nav">
+            <li class="layui-nav-item layui-this"><a href="">选中</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">常规</a>
+            </li>
+            <li class="layui-nav-item"><a href="">导航</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">子级</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">菜单1</a></dd>
+                    <dd><a href="">菜单2</a></dd>
+                    <dd><a href="">菜单3</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">选项</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">选项1</a></dd>
+                    <dd class="layui-this"><a href="">选项2</a></dd>
+                    <dd><a href="">选项3</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">演示</a></li>
+        </ul>
+    </div>
+</div>
+<div class="layui-carousel" id="test10">
+    <div carousel-item="">
+        <div><img src="//res.layui.com/static/images/layui/demo/1.png"></div>
+        <div><img src="//res.layui.com/static/images/layui/demo/2.png"></div>
+        <div><img src="//res.layui.com/static/images/layui/demo/3.png"></div>
+        <div><img src="//res.layui.com/static/images/layui/demo/4.png"></div>
+    </div>
+</div>
+
+
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<div class="layui-container layui-row">
+
+    <div class="layui-col-md3">
+        <div class="layui-panel site-menu" style="width: auto;">
+            <ul class="layui-menu layui-menu-lg">
+                <li class="layui-menu-item-group">
+                    <div class="layui-menu-body-title">
+                        关于
+                    </div>
+                    <hr>
+                    <ul>
+                        <li class="">
+                            <div class="layui-menu-body-title">
+                                <a href="/about/disclaimer.html">
+                                    <cite>免责声明</cite>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="layui-menu-body-title">
+                                <a href="/about/relatedlinks.html">
+                                    <cite>友情链接</cite>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="layui-menu-item-checked2">
+                            <div class="layui-menu-body-title">
+                                <a href="/about/notice.html">
+                                    <cite>重要公告</cite>
+                                    <span class="layui-badge-dot"></span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="layui-hide-v"> - </div>
+    </div>
+
+    <div class="layui-col-md9 site-content layui-text">
+
+        <div class="layui-row">
+            <h1 class="site-h1" style="font-size: 26px;">layui 重要公告</h1>
+
+            <p>
+                所有对 layui 为之热爱、鞭策、奉献，和支持过的开发者：
+                <br>请接受我用意念和字节传达的深深歉意。这是一个无力、无奈，甚至无助的决定：
+            </p>
+
+            <blockquote class="layui-elem-quote layui-quote-nm">
+                <em style="font-style: normal;">layui 官网将于 <strong>2021年10月13日</strong> 进行下线。</em>
+            </blockquote>
+
+            <p>届时，包括新版下载、文档和示例在内的所有框架日常维护工作，将全部迁移到 Github 和 Gitee。
+                <br>此后，layui 仍会在代码托管平台所活跃，且 2.7 正式版也将在其间首发。而 layui 官网将不复存在。<br>这不是终结，只是重归到开源的纯粹中来。
+            </p>
+
+            <p>再者，对于 layuiAdmin 和 layim 的用户，将会迁移到新站进行保留，以便老用户还能下载使用，且此二者不再面向新用户。</p>
+
+            <p>过去五年，layui 有幸被应用在不计其数的 Web 平台，在前端工程化迅速席来的浪潮中，我们仍然感受到一丝来自于 jQuery 的余晖，这是一种带有热量的冰冷（反之亦可）。使命已达，便纵有万般遗憾，更与何人说？！</p>
+
+            <p>最后，请大家怀揣对 Web 前端技术的热忱，去拥抱 Vue.js、拥抱 Element UI、拥抱更好的新时代，
+                <br>以及，所有那些值得去追求的美好事物。</p>
+
+            <p>—— 贤心</p>
+
+        </div>
+
+        <div class="layui-btn-container" style="margin-top: 50px; margin-bottom: 10px;">
+            <a href="https://gitee.com/sentsin/layui/issues" target="_blank" rel="nofollow" class="layui-btn">我有话说</a>
+        </div>
+
+        <hr class="layui-col-md9 layui-col-xs12">
+
+    </div>
+
+</div>
+
+<div class="layui-footer footer footer-about">
+    <p>
+        Copyright © 2021 <a href="/">layui.com</a> MIT Licensed</p>
+    <p>
+        <a href="/about/disclaimer.html" target="_blank">免责声明</a>
+        <a href="/about/relatedlinks.html" target="_blank">友链</a>
+        <a href="javascript:;" site-event="weixinmp">公众号</a>
+        <a target="_blank" href=" rel="nofollow">
+            <img src="">
+            赣公网安备 36010902000274号
+        </a>
+        <a href="" target="_blank" rel="nofollow">赣ICP备13006272号</a>
+    </p>
+    <div class="site-union">
+        <p class="site-union-desc">
+        <span>
+          感谢以下平台提供云加速支持
+        </span>
+        </p>
+        <p>
+            <a href="" target="_blank" rel="nofollow" sponsor="upyun">
+                <img src="" alt="upyun">
+            </a>
+            <a href="https://www.maoyun.com/?from=layui" target="_blank" rel="nofollow" sponsor="maoyun">
+                <img src="//cdn.layui.com/upload/2019_5/168_1559291577683_9348.png" alt="maoyun">
+            </a>
+        </p>
+    </div>
+</div>
+<script>
+    window.global = {
+        pageType: 'about'
+        ,preview: function(){
+            var preview = document.getElementById('LAY_preview');
+            return preview ? preview.innerHTML : '';
+        }()
+    };
+</script>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<div class="site-tree-mobile layui-hide">
+    <i class="layui-icon layui-icon-spread-left"></i>
+</div>
+<div class="site-mobile-shade"></div>
+
+
+<script>
+    layui.use(['carousel', 'form'], function(){
+        var carousel = layui.carousel
+            ,form = layui.form;
+
+        //常规轮播
+        carousel.render({
+            elem: '#test1'
+            ,arrow: 'always'
+        });
+
+        //改变下时间间隔、动画类型、高度
+        carousel.render({
+            elem: '#test2'
+            ,interval: 1800
+            ,anim: 'fade'
+            ,height: '120px'
+        });
+
+        //设定各种参数
+        var ins3 = carousel.render({
+            elem: '#test3'
+        });
+        //图片轮播
+        carousel.render({
+            elem: '#test10'
+            ,width: '100%'
+            //,height: '440px'
+            ,interval: 5000
+        });
+
+        //事件
+        carousel.on('change(test4)', function(res){
+            console.log(res)
+        });
+
+        var $ = layui.$, active = {
+            set: function(othis){
+                var THIS = 'layui-bg-normal'
+                    ,key = othis.data('key')
+                    ,options = {};
+
+                othis.css('background-color', '#5FB878').siblings().removeAttr('style');
+                options[key] = othis.data('value');
+                ins3.reload(options);
+            }
+        };
+
+        //监听开关
+        form.on('switch(autoplay)', function(){
+            ins3.reload({
+                autoplay: this.checked
+            });
+        });
+
+        $('.demoSet').on('keyup', function(){
+            var value = this.value
+                ,options = {};
+            if(!/^\d+$/.test(value)) return;
+
+            options[this.name] = value;
+            ins3.reload(options);
+        });
+
+        //其它示例
+        $('.demoTest .layui-btn').on('click', function(){
+            var othis = $(this), type = othis.data('type');
+            active[type] ? active[type].call(this, othis) : '';
+        });
+    });
+</script>
+
+<script>
+    layui.use(['element','util'], function(){
+        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+        //监听导航点击
+        element.on('nav(demo)', function(elem){
+            //console.log(elem)
+            layer.msg(elem.text());
+        });
+    });
+    util = layui.util;//引入util
+
+    util.fixbar({
+        top:true
+        , css: { right: 15, bottom: 35 }
+        , bgcolor: '#2a96ff !important;display:block;'
+        ,showHeight:100
+        , click: function (type) {
+            if (type === 'top') {
+                $('body').animate({
+                    scrollTop: 0
+                }, 200);
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+{__NOLAYOUT__}
+{include file="front_public/header"}
+<style>
+    img{
+        max-width: 100%;!important;
+    }
+
+    p>a{
+        color:blue;!important;
+    }
+    video{
+        width:400px;
+    }
+
+    /*
+   * 定义小屏幕端显示效果（移动端效果）
+   */
+    @media screen and (max-width: 500px) {
+        video{
+            width: 100% !important;
+        }
+    }
+</style>
+</head>
+<body style="background-color:#f5f5f5">
+    {/* 引入导航界面 */}
+    {include file="front_public/nav"}
+
+    <div class="layui-container" style="background-color: white;margin-top: 5px">
+        <div class="layui-row " style="padding-top: 10px">
+            <div class="layui-col-md12" style="display: none">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <div class="layui-input-black">
+                            <input type="text" name="title" required style="border: solid 1px green;border-radius: 10px"  lay-verify="required" placeholder="请输入关键词进行搜索，回车提交查询" autocomplete="off" class="layui-input layui-layer-border layui-circle">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="layui-row">
+            <div class="layui-col-md12">
+                    <div id="test-markdown-view">
+                        <textarea style="display:none;">{$row.content|html_entity_decode|default=''}</textarea>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+        var element = layui.element;
+
+        //…
+    });
+</script>
+<script>
+    //Demo
+    layui.use('form', function(){
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="__STATIC__/plugs/editormd/lib/marked.min.js"></script>
+<!-- 第三方界面样式文件google -->
+<script src="__STATIC__/plugs/editormd/lib/google-code-prettify/prettify.js"></script>
+<script src="__STATIC__/plugs/editormd/lib/raphael.min.js"></script>
+<script src="__STATIC__/plugs/editormd/lib/underscore.min.js"></script>
+<script src="__STATIC__/plugs/editormd/lib/sequence-diagram.min.js"></script>
+<script src="__STATIC__/plugs/editormd/lib/flowchart.min.js"></script>
+<script src="__STATIC__/plugs/editormd/editormd.js"></script>
+<script src="__STATIC__/plugs/editormd/plugins/editormd-image-past.js"></script>
+<script src="__STATIC__/plugs/editormd/lib/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var testView = editormd.markdownToHTML("test-markdown-view" , {
+            //height:'600px',
+            syncScrolling : "single",
+            emoji:true,
+            //启动本地图片上传功能
+            imageUpload: true,
+            watch:true,
+            // toolbarIcons : "simple",
+            imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp","zip","rar","pdf"]
+            //htmlDecode : true // Decode all html tags & attributes
+            ,htmlDecode : "style,script,iframe,sub,video,source,sup|on*"  // Filter tags, and all on* attributes
+            ,path   : "__STATIC__/plugs/editormd/lib/",
+            imageUploadURL : "/admin/ajax/uploadMarkdown", //文件提交请求路径
+            onload : function() {
+                initPasteDragImg(this); //配置图片粘贴上传
+            },
+            //saveHTMLToTextarea : true, //注意3：这个配置，方便post提交表单
+            //previewTheme : "dark",//预览主题样式 黑色
+        });
+    });
+</script>
+
+{/*引入底部js文件*/}
+{include file="front_public/footerjs"}
+

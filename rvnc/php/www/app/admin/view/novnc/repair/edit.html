@@ -1,0 +1,28 @@
+<div class="layuimini-container">
+    <div class="grid-demo " style="position: fixed;left: 0;top:0 ;text-align: left;width: 100%; z-index: 99999 !important;background-color: #f2f2f2;max-height: 90px;overflow: hidden">
+        <blockquote class="layui-elem-quote layui-quote-nm" >
+            设备名称：
+            <span class="layui-badge">{$row.location}{$row.repair_device_name}</span><br />
+            问题描述:
+            <span class="layui-badge layui-bg-cyan">{$row.problem_name}{$row.problem_description}</span><br />
+            联系电话:
+            <span class="layui-badge layui-bg-blue">{$row.report_user_phone}</span><br />
+
+        </blockquote>
+    </div>
+    <form id="app-form" class="layui-form layuimini-form" style="margin-top: 90px">
+        <div class="form-body" style="width: 100%;margin-bottom: 100px">
+            {:create_form($formService,1)}
+            {:create_form($formData,3)}
+        </div>
+        <div style="position: fixed;left: 0;bottom: 0;text-align: center;width: 100%; background: #f2f2f2;">
+            <div class="hr-line" ></div>
+            <div class="layui-form-item text-center " >
+                <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit>确认</button>
+                <button type="reset" class="layui-btn  layui-btn-primary layui-btn-sm">重置</button>
+            </div>
+        </div>
+
+
+    </form>
+</div>
