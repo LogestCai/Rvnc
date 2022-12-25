@@ -4,7 +4,7 @@
 ```shell
 git clone https://github.com/LogestCai/Rvnc.git
 
-cd rvnc/rvnc
-chmod +x ./run.sh&&./run.sh
+cd Rvnc/rvnc
+chmod +x ./run.sh&&./run.sh 192.168.1.4
 
 ```
