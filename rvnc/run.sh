@@ -24,6 +24,7 @@ docker run --name mysql57 -p 3306:3306 -v $work_dir/database/data:/var/lib/mysql
 #docker exec -i mysql57 sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD" --default-character-set=utf8 ' < $work_dir/database/views.sql
 
 ### 启动vncLNMP
+echo "===================正在启动启动vncLNMP=================================="
 docker run -dit \
 -p 9999:80 \
 -p 3307:3306 \
