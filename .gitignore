@@ -1,2 +1,3 @@
 /.idea/*
 /rvnc/php/www/runtime/*
+/rvnc/php/www/public/nginx.htaccess

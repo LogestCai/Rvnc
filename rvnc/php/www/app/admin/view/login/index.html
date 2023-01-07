@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="__STATIC__/admin/css/login.css?v={$version}" media="all">
 
 <div class="main-body">
-    <div class="logo-img">
+    <div class="logo-img" style="padding-bottom: 30px">
         <img src="/static/admin/images/hbjkjtyy.png" alt="" style="width:100%">
     </div>
     <div class="login-main">
@@ -33,25 +33,23 @@
                 {/if}
 
             </div>
-            <div class="tip">
+            <!--div class="tip">
                 <span class="icon-nocheck"></span>
                 <span class="login-tip">保持登录</span>
                 <a href="javascript:" class="bind-phone" style="color:blue" >  绑定手机号</a>
-            </div>
+            </div-->
             <div class="layui-form-item" style="text-align:center; width:100%;height:100%;margin:0px;">
                 <button class="login-btn" lay-submit>立即登录</button>
             </div>
             <div class="layui-form-item">
                 <div class="footer-small">
-                    Designed By 信息中心
                 </div>
             </div>
-
         </form>
     </div>
 </div>
 <div class="footer layui-show-md-block layui-show-lg-block layui-hide-sm layui-hide-xs">
-    {:sysconfig('site','site_copyright')}<span class="padding-5"></span>
+    {:sysconfig('site','site_copyright')} Designed By <a href="https://52qcg.cn" style="color: #bababa ">【扣丁曼】</a><span class="padding-5"></span>
 </div>
 
 <script>
