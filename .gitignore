@@ -1,3 +1,4 @@
-.idea/*
-rvnc/php/www/runtime/*
+.idea/
+.vscode/
+rvnc/php/www/runtime/
 rvnc/php/www/public/nginx.htaccess

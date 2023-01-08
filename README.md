@@ -3,7 +3,6 @@
 [![Php Version](https://img.shields.io/badge/php-%3E=7.1.0-brightgreen.svg?maxAge=2592000&color=yellow)](https://github.com/php/php-src)
 [![Mysql Version](https://img.shields.io/badge/mysql-%3E=5.7-brightgreen.svg?maxAge=2592000&color=orange)](https://www.mysql.com/)
 [![Thinkphp Version](https://img.shields.io/badge/thinkphp-%3E=6.0.2-brightgreen.svg?maxAge=2592000)](https://github.com/top-think/framework)
-[![Thinkphp Version](https://img.shields.io/badge/thinkphp-%3E=6.0.2-brightgreen.svg?maxAge=2592000)](https://github.com/top-think/framework)
 [![C#4.0](https://img.shields.io/badge/daoNet-%3E=4.0-pink.svg?maxAge=2592000&color=critical)](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework/net40)
 [![Layuimini Version](https://img.shields.io/badge/layuimini-%3E=2.0.4.2-brightgreen.svg?maxAge=2592000&color=ff69b4)](https://github.com/zhongshaofa/layuimini)
 [![noVNC](https://img.shields.io/badge/noVnc-vnc-blue.svg?maxAge=2592000)](https://github.com/novnc/noVNC)
