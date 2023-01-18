@@ -36,7 +36,7 @@ return [
             // 驱动方式
             'type'     => 'redis',
             // 服务器地址
-            'host'     => '10.87.230.199',
+            'host'     => Env::get('database.redisserver', ''),
             'serialize' => ['trim', 'trim'],
             'password' => '',//如果没有设置密码为空
         ],
