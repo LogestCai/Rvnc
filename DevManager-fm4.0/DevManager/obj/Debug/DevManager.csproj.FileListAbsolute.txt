@@ -55,9 +55,7 @@ F:\develop\Rvnc\DevManager-fm4.0\DevManager\bin\Debug\log4net.config
 F:\develop\Rvnc\DevManager-fm4.0\DevManager\bin\Debug\DevManager.exe
 F:\develop\Rvnc\DevManager-fm4.0\DevManager\bin\Debug\DevManager.pdb
 F:\develop\Rvnc\DevManager-fm4.0\DevManager\bin\Debug\log4net.dll
-F:\develop\Rvnc\DevManager-fm4.0\DevManager\bin\Debug\CSkin.xml
 F:\develop\Rvnc\DevManager-fm4.0\DevManager\bin\Debug\log4net.xml
-F:\develop\Rvnc\DevManager-fm4.0\DevManager\obj\Debug\DevManager.csprojResolveAssemblyReference.cache
 F:\develop\Rvnc\DevManager-fm4.0\DevManager\obj\Debug\DevManager.BaseInformation.resources
 F:\develop\Rvnc\DevManager-fm4.0\DevManager\obj\Debug\DevManager.deviceform.deviceRepair.resources
 F:\develop\Rvnc\DevManager-fm4.0\DevManager\obj\Debug\DevManager.deviceform.ReportRecord.resources

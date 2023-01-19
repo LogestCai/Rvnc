@@ -41,6 +41,7 @@ docker container restart vnclnmp
 ####替换数据库ip地址
 sed -i "s/HOSTNAME=10.87.230.199/HOSTNAME=$1/g" ./php/www/.env
 sed -i "s/REDISSERVER=10.87.230.199/REDISSERVER=$1/g" ./php/www/.env
+sed -i "s/host_ip=10.87.230.199/host_ip=$1/g" ./php/www/.env
 
 
 echo "===================正在启动还原mysql数据文件=================================="

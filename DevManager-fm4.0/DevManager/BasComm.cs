@@ -47,7 +47,8 @@ namespace DevManager
         /// <param name="msg"></param>
         public static void writeLog(string msg)
         {
-            Log.WriteInfo(msg, true);
+            try { Log.WriteInfo(msg, true); } catch (Exception ex) { }
+            
         }
         /// <summary>
         /// 错误日志
@@ -55,7 +56,8 @@ namespace DevManager
         /// <param name="msg"></param>
         public static void writeError(string msg)
         {
-            Log.WriteError(msg, true);
+            try { Log.WriteError(msg, true); } catch (Exception ex) { }
+            //Log.WriteError(msg, true);
         }
         /// <summary>
         /// 警告日志
@@ -63,7 +65,8 @@ namespace DevManager
         /// <param name="msg"></param>
         public static void writeWarn(string msg)
         {
-            Log.WriteWarn(msg, true);
+            try { Log.WriteWarn(msg, true); } catch (Exception ex) { }
+            //.WriteWarn(msg, true);
         }
 
         /// <summary>

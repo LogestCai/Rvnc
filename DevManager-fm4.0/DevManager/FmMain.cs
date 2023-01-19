@@ -284,7 +284,7 @@ namespace DevManager
             }
             else
             {
-                BasComm.writeError("发送redis请求发生了错误：" + sErr);
+                BasComm.writeError(serverURL + "/admin/test/setRedis"+"发送redis请求发生了错误：" + sErr);
             }
         }
         private void showMainWindow()
