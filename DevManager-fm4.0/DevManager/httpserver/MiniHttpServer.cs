@@ -157,10 +157,10 @@ namespace DevManager.httpserver
                     int to_read = content_len;
                     while (to_read > 0)
                     {
-                        Console.WriteLine("starting Read, to_read={0}", to_read);
+                       // Console.WriteLine("starting Read, to_read={0}", to_read);
 
                         int numread = this.inputStream.Read(buf, 0, Math.Min(BUF_SIZE, to_read));
-                        Console.WriteLine("read finished, numread={0}", numread);
+                       // Console.WriteLine("read finished, numread={0}", numread);
                         if (numread == 0)
                         {
                             if (to_read == 0)

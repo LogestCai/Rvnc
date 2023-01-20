@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="286fc938-bda4-4ab3-81e5-9f591dafb2c3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/CSkin.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csprojResolveAssemblyReference.cache" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.exe" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.pdb" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.GenerateResource.Cache" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.GenerateResource.Cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.exe" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.pdb" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/BasComm.cs" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/BasComm.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/FmMain.cs" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/FmMain.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/SysConfig.ini" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/SysConfig.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.FileListAbsolute.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rvnc/run.sh" afterPath="$PROJECT_DIR$/rvnc/run.sh" />
-    </list>
+    <list default="true" id="286fc938-bda4-4ab3-81e5-9f591dafb2c3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +15,8 @@
       <file leaf-file-name="run.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rvnc/run.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="805">
-              <caret line="43" column="37" lean-forward="false" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+            <state relative-caret-position="733">
+              <caret line="46" column="75" lean-forward="true" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -642,12 +628,12 @@
       <workItem from="1671766989560" duration="13335000" />
       <workItem from="1671938081262" duration="3357000" />
       <workItem from="1672983453489" duration="13777000" />
-      <workItem from="1673882003160" duration="3087000" />
+      <workItem from="1673882003160" duration="3807000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33556000" />
+    <option name="totallyTimeSpent" value="34276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1550" extended-state="0" />
@@ -660,7 +646,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299639" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24476534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -994,8 +980,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rvnc/run.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="43" column="37" lean-forward="false" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+        <state relative-caret-position="733">
+          <caret line="46" column="75" lean-forward="true" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="75" />
           <folding />
         </state>
       </provider>
