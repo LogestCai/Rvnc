@@ -1,0 +1,52 @@
+﻿INFO  2023-02-13 09:27:25,669 [AppLog] 获取设备信息成功返回{
+  "code": 0,
+  "msg": "未获取到有效数据",
+  "data": [],
+  "url": "",
+  "wait": 3
+}
+ERROR 2023-02-13 09:27:25,675 [AppLog] 获取设备信息失败！:未获取到有效数据
+INFO  2023-02-13 09:27:35,819 [AppLog] 验证ip返回!{
+  "code": 1,
+  "msg": "验证ip成功！",
+  "data": {
+    "ip": "192.168.1.5"
+  },
+  "url": "",
+  "wait": 3
+}
+INFO  2023-02-13 09:27:35,820 [AppLog] 有效ip 为:192.168.1.5
+INFO  2023-02-13 09:27:35,878 [AppLog] 验证ip返回!{
+  "code": 1,
+  "msg": "设置成功！",
+  "data": [],
+  "url": "",
+  "wait": 3
+}
+INFO  2023-02-13 09:27:35,879 [AppLog] 发送成功！:1807-F7D4-BD9B-C98A-4969-46F6-587D-6F4E
+INFO  2023-02-13 09:27:35,982 [AppLog] 请求返回信息为:{"code":1,"msg":"设置成功！","data":{"UUID":"1807-F7D4-BD9B-C98A-4969-46F6-587D-6F4E","device_name":"Royee","location":"Royee","ip":"192.168.1.5","ips":"192.168.48.1|192.168.71.1|192.168.1.5|192.168.32.1","mac":"70-A8-D3-4E-28-F7","computer_name":"Royee","group":"1","os_version":"Microsoft Windows NT 6.2.9200.0"},"url":"","wait":3}
+INFO  2023-02-13 09:27:35,982 [AppLog] 请求设备信息返回！{
+  "code": 1,
+  "msg": "设置成功！",
+  "data": {
+    "UUID": "1807-F7D4-BD9B-C98A-4969-46F6-587D-6F4E",
+    "device_name": "Royee",
+    "location": "Royee",
+    "ip": "192.168.1.5",
+    "ips": "192.168.48.1|192.168.71.1|192.168.1.5|192.168.32.1",
+    "mac": "70-A8-D3-4E-28-F7",
+    "computer_name": "Royee",
+    "group": "1",
+    "os_version": "Microsoft Windows NT 6.2.9200.0"
+  },
+  "url": "",
+  "wait": 3
+}
+INFO  2023-02-13 09:27:35,983 [AppLog] 设备信息保存成功！
+INFO  2023-02-13 09:27:36,047 [AppLog] 获取全局禁止进程数据为：{
+  "code": 1,
+  "msg": "获取成功！",
+  "data": [],
+  "url": "",
+  "wait": 3
+}

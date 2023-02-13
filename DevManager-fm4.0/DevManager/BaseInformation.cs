@@ -1,5 +1,6 @@
 ﻿using CCWin;
 using DevManager.lib;
+using DevManger;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace DevManager
 {
-    public partial class BaseInformation : Skin_Metro
+    public partial class BaseInformation : ResponsiveForm
     {
         public Device devInfo = null;
         public BaseInformation(Device dv)

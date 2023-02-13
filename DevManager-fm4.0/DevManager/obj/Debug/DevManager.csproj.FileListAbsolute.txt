@@ -62,3 +62,4 @@ F:\develop\Rvnc\DevManager-fm4.0\DevManager\obj\Debug\DevManager.deviceform.Repo
 F:\develop\Rvnc\DevManager-fm4.0\DevManager\obj\Debug\DevManager.FmMain.resources
 F:\develop\Rvnc\DevManager-fm4.0\DevManager\obj\Debug\DevManager.Properties.Resources.resources
 F:\develop\Rvnc\DevManager-fm4.0\DevManager\obj\Debug\DevManager.csproj.GenerateResource.Cache
+F:\develop\Rvnc\DevManager-fm4.0\DevManager\obj\Debug\DevManager.csprojResolveAssemblyReference.cache

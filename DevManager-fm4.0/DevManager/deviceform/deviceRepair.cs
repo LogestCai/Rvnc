@@ -1,5 +1,6 @@
 ﻿using CCWin;
 using DevManager.lib;
+using DevManger;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace DevManager.deviceform
 {
-    public partial class deviceRepair : Skin_Metro
+    public partial class deviceRepair : ResponsiveForm
     {
         public Device deviceInfo = new Device();
         public deviceRepair(Device dv )

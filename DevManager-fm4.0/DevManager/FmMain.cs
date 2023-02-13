@@ -15,10 +15,11 @@ using System.Collections;
 using DevManager.deviceform;
 using DevManager.httpserver;
 using System.Threading;
+using DevManger;
 
 namespace DevManager
 {
-    public partial class FmMain : Skin_Metro
+    public partial class FmMain : ResponsiveForm
     {
         // 控制界面是否显示
         private bool iShowWindow = false;
