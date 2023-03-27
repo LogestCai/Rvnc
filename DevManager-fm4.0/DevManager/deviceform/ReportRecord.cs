@@ -123,7 +123,8 @@ namespace DevManager.deviceform
                                 jo["data"][i]["report_user_phone"].ToString(),
                                 jo["data"][i]["accepted_user"].ToString(),
                                 jo["data"][i]["accepted_time"].ToString(),
-                                jo["data"][i]["finish_time"].ToString(),
+                                jo["data"][i]["finish_time"].ToString()
+                                ,
                                 jo["data"][i]["deprecated_time"].ToString()
                                 );
                         }
