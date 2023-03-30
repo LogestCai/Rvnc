@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="286fc938-bda4-4ab3-81e5-9f591dafb2c3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.vshost.exe.manifest" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/.vs/DevManager/v14/.suo" afterPath="$PROJECT_DIR$/DevManager-fm4.0/.vs/DevManager/v14/.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.exe" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.pdb" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/tvnserver.exe" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/tvnserver.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DesignTimeResolveAssemblyReferences.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.FmMain.resources" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.FmMain.resources" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.GenerateResource.Cache" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.GenerateResource.Cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csprojResolveAssemblyReference.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.exe" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.pdb" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.pdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/BasComm.cs" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/BasComm.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/DevManager.csproj" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/DevManager.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/FmMain.Designer.cs" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/FmMain.Designer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/FmMain.cs" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/FmMain.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/FmMain.resx" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/FmMain.resx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/SysConfig.ini" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/SysConfig.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rvnc/run.sh" afterPath="$PROJECT_DIR$/rvnc/run.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,10 +15,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="run.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rvnc/run.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
+            <state relative-caret-position="5">
               <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
@@ -73,12 +55,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="551">
-                <caret line="40" column="20" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+              <first_editor relative-caret-position="754">
+                <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -167,8 +149,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/rvnc/php/www/.env" />
         <option value="$PROJECT_DIR$/rvnc/php/www/app/admin/config/cache.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/rvnc/run.sh" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -367,12 +349,12 @@
       <workItem from="1672983453489" duration="13777000" />
       <workItem from="1673882003160" duration="7617000" />
       <workItem from="1679906581198" duration="1359000" />
-      <workItem from="1679977078044" duration="4439000" />
+      <workItem from="1679977078044" duration="5006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43884000" />
+    <option name="totallyTimeSpent" value="44451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2891" y="535" width="2902" height="1570" extended-state="6" />
@@ -757,17 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="551">
-            <caret line="40" column="20" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/SysConfig.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -813,9 +784,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rvnc/run.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
+        <state relative-caret-position="5">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="754">
+            <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
