@@ -16,11 +16,13 @@ using DevManager.deviceform;
 using DevManager.httpserver;
 using System.Threading;
 using DevManger;
+using System.Runtime.InteropServices;
 
 namespace DevManager
 {
     public partial class FmMain : ResponsiveForm
     {
+       
         // 控制界面是否显示
         private bool iShowWindow = false;
         // 必须运行的程序  系统会定时检测是否启动
@@ -38,10 +40,44 @@ namespace DevManager
 
         private bool isUpdate = true;
         private bool isRunning = false;
+        private bool runAsServiceVnc = false;
         // 获取配置参数
+
+
+        ///=====================================以下功能为截图所需要的功能=============================================
+        ///
+
+        void ScreenCapture()
+        {
+            DLL.PrScrn();
+        }
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            Hotkey.ProcessHotKey(m);
+        }
+
+        private void RegisterHotKey()
+        {
+            Hotkey.Regist(Handle, HotkeyModifiers.MOD_ALT, Keys.F1, ScreenCapture);
+        }
+
+        private void btnCutScreen_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+            
+            this.ShowInTaskbar = false;
+            RegisterHotKey();
+            ScreenCapture();
+        }
+
+        // =========================定义热键功能结束==========================================
+        
+            
+                   
         private void setMustRunProcessInfo()
         {
-            this.mustRunProcess.Add("tvnserver");
+           // this.mustRunProcess.Add("tvnserver");
             
         }
 
@@ -62,10 +98,7 @@ namespace DevManager
                     {
                         if(!this.preventedProcess.Exists(x=>x==jo["data"][i]["key"].ToString()))
                         this.preventedProcess.Add(jo["data"][i]["key"].ToString());
-
                     }
-
-
                 }
                 else
                 {
@@ -299,6 +332,7 @@ namespace DevManager
                 //任务栏区显示图标
                 this.ShowInTaskbar = true;
                 //this.notifyIcon1.Visible = false;
+               
             }
             else
             {
@@ -306,6 +340,7 @@ namespace DevManager
                 this.ShowInTaskbar = false;
                 this.notifyIcon1.Visible = true;
                 
+
             }
         }
 
@@ -343,8 +378,9 @@ namespace DevManager
             {
                 if (!OperateProcess.isPortUsed(5901))
                 {
-                    BasComm.startProcessByName(AppDomain.CurrentDomain.BaseDirectory + "\\tvnserver.exe");
+                    //BasComm.startProcessByName(AppDomain.CurrentDomain.BaseDirectory + "\\tvnserver.exe");
                     //continue;
+                    BasComm.restartVNC();
                 }
                 foreach (string item in this.mustRunProcess)
                 {
@@ -495,49 +531,72 @@ namespace DevManager
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            //定义截图程序热键  
+            //注册热键(窗体句柄,热键ID,辅助键,实键)
+            
 
-                //Updater.CheckUpdateSimple("http://10.87.230.225:7777/newUpdate/", "update.xml");
-                //notifyIcon1.Visible = false;
-                Init();
-                //绑定右下角图标事件
-                notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
-                notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
+            runAsServiceVnc = BasComm.getIniValue("参数", "Vnc安装").ToString().Equals("0");// 是否禁用程序阻止
+            if (runAsServiceVnc)
+            {
+                BasComm.InstallVncService();
+                BasComm.setIniValue("参数", "Vnc安装","1");
+            }
+            //Updater.CheckUpdateSimple("http://10.87.230.225:7777/newUpdate/", "update.xml");
+            //notifyIcon1.Visible = false;
+            Init();
+            //绑定右下角图标事件
+            notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
+            notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
 
-                Tabmain.SelectedIndex = 0;
+            Tabmain.SelectedIndex = 0;
                 
 
                
-                //第七步  创建定时器
+            //第七步  创建定时器
                 
-                timerGetTime = new System.Windows.Forms.Timer();
-                timerGetTime.Tick += new EventHandler(HandleTime);
-                timerGetTime.Interval = 1000 * 60 * 1;//定时时间按照分钟计算 1分钟执行一次。
-                timerGetTime.Enabled = true;
-                //    开启定时器
-                timerGetTime.Start();
-                try
-                {
-                    MiniHttpServer httpServer;
-                    BasComm.killProcessByPort(9999);
-                    httpServer = new MiniHttpServer(9999);
-                    // httpServer.listen();
-                    Thread thread = new Thread(new ThreadStart(httpServer.listen));
-                    thread.IsBackground = true;
-                    thread.Start();
-                }
-                catch (Exception ex)
-                {
-                    BasComm.writeError("http服务启动失败" + ex.Message);
-                }
+            timerGetTime = new System.Windows.Forms.Timer();
+            timerGetTime.Tick += new EventHandler(HandleTime);
+            timerGetTime.Interval = 1000 * 60 * 1;//定时时间按照分钟计算 1分钟执行一次。
+            timerGetTime.Enabled = true;
+            //    开启定时器
+            timerGetTime.Start();
+            try
+            {
+                MiniHttpServer httpServer;
+                BasComm.killProcessByPort(9999);
+                httpServer = new MiniHttpServer(9999);
+                // httpServer.listen();
+                Thread thread = new Thread(new ThreadStart(httpServer.listen));
+                thread.IsBackground = true;
+                thread.Start();
+            }
+            catch (Exception ex)
+            {
+                BasComm.writeError("http服务启动失败" + ex.Message);
+            }
 
-                //窗体最小化显示
-                this.WindowState = FormWindowState.Minimized;
-                //不显示在任务栏中
-                this.ShowInTaskbar = false;
-                this.notifyIcon1.Visible = true;
-           
-            //
+            //窗体最小化显示
+            this.WindowState = FormWindowState.Minimized;
+            //不显示在任务栏中
+            this.ShowInTaskbar = false;
+            this.notifyIcon1.Visible = true;
+
+            //最后注册热键
+            //try
+            //{
+            //    //uint ctrHotKey = (uint)KeyModifiers.Control;
+            //    //ctrHotKey = (uint)(KeyModifiers.Alt | KeyModifiers.Control);
+            //    //HotKey.RegisterHotKey(Handle, 1000, ctrHotKey, Keys.D);//这时热键为Alt+CTRL+D
+            //    //BasComm.writeLog("Alt +Ctrl + D 热键被设置成功！" );
+            //    //Hotkey.Regist(Handle, HotkeyModifiers.MOD_ALT, Keys.F1, ScreenCapture);
+
+            //    RegisterHotKey();
+            //}
+            //catch (Exception te)
+            //{
+            //    BasComm.writeLog("Alt + F1 热键被占用" + te.Message);
+            //}
+
 
         }
 
@@ -550,7 +609,8 @@ namespace DevManager
             {
                 // to do执行具体定时任务
                 // 定时运行需要指定的内部程序
-                if (!isRunning) Init();
+                if (BasComm.ServiceExists("tvnserver") && !BasComm.IsProcessExists("tvnserver")) BasComm.restartVNC();
+                if (!isRunning) Init();                
                 runMustProcess();
                 sendRedisValue(devInfo.UUID, devInfo.validIp);
                 if (!forbiddenPreventedProcess) { stopMustProcess(); }
@@ -576,13 +636,13 @@ namespace DevManager
         /// <param name="e"></param>
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
-            //iShowWindow = false;
-            //showMainWindow();
+            
             if (this.WindowState == FormWindowState.Minimized)//最小化      
             {
                 this.ShowInTaskbar = false;
                 this.notifyIcon1.Visible = true;
             }
+
         }
         /// <summary>
         /// 关闭窗体事件
@@ -591,12 +651,11 @@ namespace DevManager
         /// <param name="e"></param>
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
+            //注消热键(句柄,热键ID)   
+            Hotkey.UnRegist(this.Handle, ScreenCapture);
             WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
-            e.Cancel = true;
-            
-
+            e.Cancel = true;  
         }
         /// <summary>
         /// 最小化图标鼠标事件
@@ -622,27 +681,28 @@ namespace DevManager
             // 关闭所有的线程
             if (timerGetTime.Enabled) timerGetTime.Stop();
             // 退出时停止附属的程序
-            BasComm.killProcessByName("tvnserver");
+            BasComm.StopVncService(); // 停止vnc服务
+            BasComm.killProcessByName("tvnserver");// 停止vnc应用
              stopMustProcess();            
 
             //System.Environment.Exit(0);
             this.notifyIcon1.Visible = false;
+            //注消热键(句柄,热键ID)   
+            Hotkey.UnRegist(this.Handle, ScreenCapture);
             this.Dispose();
             this.Close();
             Application.Exit();
         }
 
         private void 显示stripmenu_Click(object sender, EventArgs e)
-        {
-           
+        {            
             //还原窗体显示    
              WindowState = FormWindowState.Normal;
             ////激活窗体并给予它焦点
             this.Activate();
             //任务栏区显示图标
-             this.ShowInTaskbar = true;
-
-
+            this.ShowInTaskbar = true;
+           
         }
 
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
@@ -654,8 +714,7 @@ namespace DevManager
                 //激活窗体并给予它焦点
                 this.Activate();
                 //任务栏区显示图标
-                this.ShowInTaskbar = true;
-               
+                this.ShowInTaskbar = true;               
             }
         }
 
@@ -763,6 +822,91 @@ namespace DevManager
             fm.ShowDialog();
            
         }
+
+
+      
+    }
+
+
+    public class DLL
+    {
+        [DllImport("PrScrn.dll", EntryPoint = "PrScrn")]
+
+        public extern static int PrScrn();//与dll中一致   
+    }
+
+
+
+    public static class Hotkey
+    {
+
+        #region 系统api
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool RegisterHotKey(IntPtr hWnd, int id, HotkeyModifiers fsModifiers, Keys vk);
+
+        [DllImport("user32.dll")]
+        static extern bool UnregisterHotKey(IntPtr hWnd, int id);
+        #endregion
+
+        /// <summary> 
+        /// 注册快捷键 
+        /// </summary> 
+        /// <param name="hWnd">持有快捷键窗口的句柄</param> 
+        /// <param name="fsModifiers">组合键</param> 
+        /// <param name="vk">快捷键的虚拟键码</param> 
+        /// <param name="callBack">回调函数</param> 
+        public static void Regist(IntPtr hWnd, HotkeyModifiers fsModifiers, Keys vk, HotKeyCallBackHanlder callBack)
+        {
+            int id = keyid++;
+            if (!RegisterHotKey(hWnd, id, fsModifiers, vk))
+                return;
+            keymap[id] = callBack;
+        }
+
+        /// <summary> 
+        /// 注销快捷键 
+        /// </summary> 
+        /// <param name="hWnd">持有快捷键窗口的句柄</param> 
+        /// <param name="callBack">回调函数</param> 
+        public static void UnRegist(IntPtr hWnd, HotKeyCallBackHanlder callBack)
+        {
+            foreach (KeyValuePair<int, HotKeyCallBackHanlder> var in keymap)
+            {
+                if (var.Value == callBack)
+                    UnregisterHotKey(hWnd, var.Key);
+            }
+        }
+
+        /// <summary> 
+        /// 快捷键消息处理 
+        /// </summary> 
+        public static void ProcessHotKey(System.Windows.Forms.Message m)
+        {
+            if (m.Msg == WM_HOTKEY)
+            {
+                int id = m.WParam.ToInt32();
+                HotKeyCallBackHanlder callback;
+                if (keymap.TryGetValue(id, out callback))
+                {
+                    callback();
+                }
+            }
+        }
+
+        const int WM_HOTKEY = 0x312;
+        static int keyid = 100;
+        static Dictionary<int, HotKeyCallBackHanlder> keymap = new Dictionary<int, HotKeyCallBackHanlder>();
+
+        public delegate void HotKeyCallBackHanlder();
+    }
+
+    public enum HotkeyModifiers
+    {
+        MOD_ALT = 0x1,
+        MOD_CONTROL = 0x2,
+        MOD_SHIFT = 0x4,
+        MOD_WIN = 0x8
     }
 
 }

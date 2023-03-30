@@ -143,6 +143,16 @@ namespace DevManager
         {
             OperateProcess.killProcess(proName);
         }
+
+        public static bool portIsUsed(int port)
+        {
+            return OperateProcess.isPortUsed(port);
+        }
+
+        public static bool IsProcessExists(string processName)
+        {
+            return OperateProcess.checkProcessExists(processName);
+        }
         /// <summary>
         /// 启动程序  传入绝对路径
         /// </summary>
@@ -154,12 +164,32 @@ namespace DevManager
 
         public static void restartVNC()
         {
-            if (OperateProcess.isPortUsed(5901))
-            {
-                OperateProcess.killProcessByPort(5901);
-                //continue;
-            }
-            OperateProcess.startQueueExe(AppDomain.CurrentDomain.BaseDirectory + "\\tvnserver.exe");
+            //if (OperateProcess.isPortUsed(5901))
+            //{
+            //    OperateProcess.killProcessByPort(5901);
+            //    //continue;
+            //}            
+            //OperateProcess.startQueueExe(AppDomain.CurrentDomain.BaseDirectory + "\\tvnserver.exe");
+            WinService.ServiceStop("tvnserver");
+            WinService.ServiceStar("tvnserver");
+        }
+
+        public static bool StopVncService()
+        {
+            return WinService.ServiceStop("tvnserver");
+        }
+
+        public static void InstallVncService()
+        {
+            // 写入注册表信息 
+            OperateProcess.execCMD("reg add HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System /v SoftwareSASGeneration /t REG_DWORD /d 1 /f");
+            OperateProcess.execCMD(AppDomain.CurrentDomain.BaseDirectory + "\\tvnserver -reinstall -silent");
+            BasComm.writeLog(AppDomain.CurrentDomain.BaseDirectory + "\\tvnserver -reinstall -silent");
+        }
+
+        public static bool ServiceExists(string serverName)
+        {
+            return WinService.ServicesExists(serverName);
         }
 
         /// <summary>

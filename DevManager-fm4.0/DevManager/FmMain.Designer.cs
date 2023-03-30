@@ -39,6 +39,7 @@
             this.btnStatus = new CCWin.SkinControl.SkinButton();
             this.cap一键报修 = new CCWin.SkinControl.SkinCaptionPanel();
             this.cap基本信息 = new CCWin.SkinControl.SkinCaptionPanel();
+            this.btnCutScreen = new CCWin.SkinControl.SkinButton();
             this.btnHelp = new CCWin.SkinControl.SkinButton();
             this.txtRich = new CCWin.SkinControl.RtfRichTextBox();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
@@ -61,7 +62,7 @@
             // 
             this.notifyIcon1.ContextMenuStrip = this.myMenu;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "办公助手";
+            this.notifyIcon1.Text = "RVNC";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
@@ -101,7 +102,7 @@
             this.Tabmain.ImgTxtOffset = new System.Drawing.Point(0, 0);
             this.Tabmain.ItemSize = new System.Drawing.Size(70, 36);
             this.Tabmain.Location = new System.Drawing.Point(8, 30);
-            this.Tabmain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Tabmain.Margin = new System.Windows.Forms.Padding(4);
             this.Tabmain.Name = "Tabmain";
             this.Tabmain.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("Tabmain.PageArrowDown")));
             this.Tabmain.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("Tabmain.PageArrowHover")));
@@ -126,7 +127,7 @@
             this.subTab首页.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subTab首页.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.subTab首页.Location = new System.Drawing.Point(0, 36);
-            this.subTab首页.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subTab首页.Margin = new System.Windows.Forms.Padding(4);
             this.subTab首页.Name = "subTab首页";
             this.subTab首页.Size = new System.Drawing.Size(983, 772);
             this.subTab首页.TabIndex = 0;
@@ -142,7 +143,7 @@
             this.btnStatus.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnStatus.DownBack = null;
             this.btnStatus.Location = new System.Drawing.Point(0, 719);
-            this.btnStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStatus.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatus.MouseBack = null;
             this.btnStatus.Name = "btnStatus";
             this.btnStatus.NormlBack = null;
@@ -156,7 +157,7 @@
             // 
             this.cap一键报修.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.cap一键报修.Location = new System.Drawing.Point(474, 82);
-            this.cap一键报修.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cap一键报修.Margin = new System.Windows.Forms.Padding(4);
             this.cap一键报修.Name = "cap一键报修";
             this.cap一键报修.Size = new System.Drawing.Size(496, 564);
             this.cap一键报修.TabIndex = 3;
@@ -165,14 +166,33 @@
             // cap基本信息
             // 
             this.cap基本信息.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.cap基本信息.Controls.Add(this.btnCutScreen);
             this.cap基本信息.Controls.Add(this.btnHelp);
             this.cap基本信息.Controls.Add(this.txtRich);
             this.cap基本信息.Location = new System.Drawing.Point(4, 82);
-            this.cap基本信息.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cap基本信息.Margin = new System.Windows.Forms.Padding(4);
             this.cap基本信息.Name = "cap基本信息";
             this.cap基本信息.Size = new System.Drawing.Size(460, 564);
             this.cap基本信息.TabIndex = 2;
             this.cap基本信息.Text = "基本信息";
+            // 
+            // btnCutScreen
+            // 
+            this.btnCutScreen.BackColor = System.Drawing.Color.Transparent;
+            this.btnCutScreen.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnCutScreen.DownBack = null;
+            this.btnCutScreen.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCutScreen.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnCutScreen.Location = new System.Drawing.Point(4, 464);
+            this.btnCutScreen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCutScreen.MouseBack = null;
+            this.btnCutScreen.Name = "btnCutScreen";
+            this.btnCutScreen.NormlBack = null;
+            this.btnCutScreen.Size = new System.Drawing.Size(276, 54);
+            this.btnCutScreen.TabIndex = 5;
+            this.btnCutScreen.Text = "按Alt+F1快捷截图";
+            this.btnCutScreen.UseVisualStyleBackColor = false;
+            this.btnCutScreen.Click += new System.EventHandler(this.btnCutScreen_Click);
             // 
             // btnHelp
             // 
@@ -185,7 +205,7 @@
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHelp.ImageSize = new System.Drawing.Size(30, 30);
             this.btnHelp.Location = new System.Drawing.Point(8, 387);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(4);
             this.btnHelp.MouseBack = null;
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.NormlBack = null;
@@ -205,7 +225,7 @@
             this.txtRich.ForeColor = System.Drawing.Color.White;
             this.txtRich.HiglightColor = CCWin.SkinControl.RtfRichTextBox.RtfColor.White;
             this.txtRich.Location = new System.Drawing.Point(8, 40);
-            this.txtRich.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRich.Margin = new System.Windows.Forms.Padding(4);
             this.txtRich.Name = "txtRich";
             this.txtRich.ReadOnly = true;
             this.txtRich.Size = new System.Drawing.Size(446, 324);
@@ -221,7 +241,7 @@
             this.skinButton1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.skinButton1.Location = new System.Drawing.Point(0, 4);
-            this.skinButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.skinButton1.Margin = new System.Windows.Forms.Padding(4);
             this.skinButton1.MouseBack = null;
             this.skinButton1.Name = "skinButton1";
             this.skinButton1.NormlBack = null;
@@ -239,9 +259,9 @@
             this.subTab设备管理.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subTab设备管理.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.subTab设备管理.Location = new System.Drawing.Point(0, 36);
-            this.subTab设备管理.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subTab设备管理.Margin = new System.Windows.Forms.Padding(4);
             this.subTab设备管理.Name = "subTab设备管理";
-            this.subTab设备管理.Size = new System.Drawing.Size(975, 753);
+            this.subTab设备管理.Size = new System.Drawing.Size(983, 772);
             this.subTab设备管理.TabIndex = 1;
             this.subTab设备管理.TabItemImage = null;
             this.subTab设备管理.Text = "设备管理";
@@ -257,7 +277,7 @@
             this.btnReportRecord.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportRecord.ImageSize = new System.Drawing.Size(25, 25);
             this.btnReportRecord.Location = new System.Drawing.Point(248, 4);
-            this.btnReportRecord.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReportRecord.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportRecord.MouseBack = null;
             this.btnReportRecord.Name = "btnReportRecord";
             this.btnReportRecord.NormlBack = null;
@@ -278,7 +298,7 @@
             this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReport.ImageSize = new System.Drawing.Size(25, 25);
             this.btnReport.Location = new System.Drawing.Point(4, 4);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnReport.MouseBack = null;
             this.btnReport.Name = "btnReport";
             this.btnReport.NormlBack = null;
@@ -295,9 +315,9 @@
             this.subTab帮助.Controls.Add(this.btn帮助);
             this.subTab帮助.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subTab帮助.Location = new System.Drawing.Point(0, 36);
-            this.subTab帮助.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subTab帮助.Margin = new System.Windows.Forms.Padding(4);
             this.subTab帮助.Name = "subTab帮助";
-            this.subTab帮助.Size = new System.Drawing.Size(975, 753);
+            this.subTab帮助.Size = new System.Drawing.Size(983, 772);
             this.subTab帮助.TabIndex = 2;
             this.subTab帮助.TabItemImage = null;
             this.subTab帮助.Text = "帮助";
@@ -310,7 +330,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnUpdate.Location = new System.Drawing.Point(278, 177);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.MouseBack = null;
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.NormlBack = null;
@@ -328,7 +348,7 @@
             this.btn帮助.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn帮助.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btn帮助.Location = new System.Drawing.Point(0, 4);
-            this.btn帮助.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn帮助.Margin = new System.Windows.Forms.Padding(4);
             this.btn帮助.MouseBack = null;
             this.btn帮助.Name = "btn帮助";
             this.btn帮助.NormlBack = null;
@@ -346,7 +366,7 @@
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FmMain";
             this.Text = "RvncClient";
@@ -385,6 +405,7 @@
         private CCWin.SkinControl.SkinButton btnHelp;
         private CCWin.SkinControl.SkinButton btnReportRecord;
         private CCWin.SkinControl.SkinButton btnReport;
+        private CCWin.SkinControl.SkinButton btnCutScreen;
     }
 }
 
