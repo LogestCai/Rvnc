@@ -22,6 +22,9 @@
 ```bash
 第一步，下载安装包
 git clone https://github.com/LogestCai/Rvnc.git
+或者
+git clone https://gitee.com/qcg0223/Rvnc.git
+
 第二步，安装依赖包
 cd Rvnc/rvnc
 ### 需要制定安装机器的IP地址 请设置平台服务器ip地址为静态ip
@@ -50,7 +53,7 @@ chmod +x ./run.sh&&./run.sh 192.168.1.4
 ## 代码仓库
 
 * GitHub地址：[https://github.com/LogestCai/Rvnc](https://github.com/LogestCai/Rvnc)
-
+* Gitee地址:[https://gitee.com/qcg0223/Rvnc.git](https://gitee.com/qcg0223/Rvnc.git)
 
 ## 项目效果
 
