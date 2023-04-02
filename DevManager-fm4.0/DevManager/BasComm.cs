@@ -182,9 +182,22 @@ namespace DevManager
         public static void InstallVncService()
         {
             // 写入注册表信息 
-            OperateProcess.execCMD("reg add HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System /v SoftwareSASGeneration /t REG_DWORD /d 1 /f");
+            //OperateProcess.execCMD("reg add HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System /v SoftwareSASGeneration /t REG_DWORD /d 1 /f");
             OperateProcess.execCMD(AppDomain.CurrentDomain.BaseDirectory + "\\tvnserver -reinstall -silent");
+            OperateProcess.execCMD(AppDomain.CurrentDomain.BaseDirectory + "\\tvnserver -start -silent");
             BasComm.writeLog(AppDomain.CurrentDomain.BaseDirectory + "\\tvnserver -reinstall -silent");
+        }
+
+
+        public static void restartVNCApp()
+        {
+            if (OperateProcess.isPortUsed(5901))
+            {
+                OperateProcess.killProcessByPort(5901);
+                //continue;
+            }
+            OperateProcess.startQueueExe(AppDomain.CurrentDomain.BaseDirectory + "\\tvnserver.exe");
+
         }
 
         public static bool ServiceExists(string serverName)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,6 +11,32 @@ namespace DevManager.lib
 {
     public class Tools
     {
+
+
+
+        public static bool setRegistryKeyDWord(string path, string key, int value)
+        {
+            // win10提醒设置的注册表路径
+            //string path = @"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System";
+            // string key = "SoftwareSASGeneration";
+            // value =1;
+            RegistryKey hkIm = Registry.LocalMachine;
+            RegistryKey keyItem = hkIm.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System", true);
+            //RegistryKey keyItem = software.CreateSubKey("SoftwareSASGeneration");
+            keyItem.SetValue(key, value, RegistryValueKind.DWord);
+            return true;
+            // 获取注册表中win10提醒设置的节点（32位系统改为 RegistryView.Registry32）
+            //using (var rklm = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64))
+            //{
+            //    using (var rkNotify = rklm.OpenSubKey(path, true))
+            //    {
+            //        // 添加值（禁止为1，允许为0）
+            //        rkNotify.SetValue("SoftwareSASGeneration", 1, RegistryValueKind.DWord);
+            //        return true;
+            //    }
+            //}
+
+        }
         /// <summary>
         /// 
         /// </summary>

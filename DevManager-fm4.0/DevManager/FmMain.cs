@@ -538,8 +538,20 @@ namespace DevManager
             runAsServiceVnc = BasComm.getIniValue("参数", "Vnc安装").ToString().Equals("0");// 是否禁用程序阻止
             if (runAsServiceVnc)
             {
-                BasComm.InstallVncService();
-                BasComm.setIniValue("参数", "Vnc安装","1");
+                try
+                {
+                    BasComm.InstallVncService();
+                    BasComm.setIniValue("参数", "Vnc安装", "1");
+                    // 写入注册表信息 
+                    string path = @"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System";
+                    string key = "SoftwareSASGeneration";
+                    Tools.setRegistryKeyDWord(path, key, 1);
+                    //OperateProcess.execCMD("reg add HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System /v SoftwareSASGeneration /t REG_DWORD /d 1 /f");
+                }
+                catch (Exception ex)
+                {
+                    BasComm.writeError("安装vnc 服务失败！" + ex.Message);
+                }
             }
             //Updater.CheckUpdateSimple("http://10.87.230.225:7777/newUpdate/", "update.xml");
             //notifyIcon1.Visible = false;
@@ -823,8 +835,19 @@ namespace DevManager
            
         }
 
-
-      
+        private void btnRestartVNC_Click(object sender, EventArgs e)
+        {
+            if (BasComm.ServiceExists("tvnserver"))
+            {
+                BasComm.restartVNC();
+            }
+            else
+            {
+                BasComm.killProcessByPort(5901);
+                BasComm.restartVNCApp();
+            }
+            MessageBox.Show("重启远程服务成功！");
+        }
     }
 
 

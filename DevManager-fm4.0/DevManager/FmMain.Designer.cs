@@ -39,6 +39,7 @@
             this.btnStatus = new CCWin.SkinControl.SkinButton();
             this.cap一键报修 = new CCWin.SkinControl.SkinCaptionPanel();
             this.cap基本信息 = new CCWin.SkinControl.SkinCaptionPanel();
+            this.btnRestartVNC = new CCWin.SkinControl.SkinButton();
             this.btnCutScreen = new CCWin.SkinControl.SkinButton();
             this.btnHelp = new CCWin.SkinControl.SkinButton();
             this.txtRich = new CCWin.SkinControl.RtfRichTextBox();
@@ -113,7 +114,7 @@
             this.Tabmain.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.Tabmain.PageNorml = null;
             this.Tabmain.SelectedIndex = 0;
-            this.Tabmain.Size = new System.Drawing.Size(983, 808);
+            this.Tabmain.Size = new System.Drawing.Size(981, 890);
             this.Tabmain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.Tabmain.TabIndex = 0;
             // 
@@ -129,7 +130,7 @@
             this.subTab首页.Location = new System.Drawing.Point(0, 36);
             this.subTab首页.Margin = new System.Windows.Forms.Padding(4);
             this.subTab首页.Name = "subTab首页";
-            this.subTab首页.Size = new System.Drawing.Size(983, 772);
+            this.subTab首页.Size = new System.Drawing.Size(981, 854);
             this.subTab首页.TabIndex = 0;
             this.subTab首页.TabItemImage = null;
             this.subTab首页.Text = "首页";
@@ -142,12 +143,12 @@
             this.btnStatus.BackColor = System.Drawing.Color.Transparent;
             this.btnStatus.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnStatus.DownBack = null;
-            this.btnStatus.Location = new System.Drawing.Point(0, 719);
+            this.btnStatus.Location = new System.Drawing.Point(0, 801);
             this.btnStatus.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatus.MouseBack = null;
             this.btnStatus.Name = "btnStatus";
             this.btnStatus.NormlBack = null;
-            this.btnStatus.Size = new System.Drawing.Size(983, 34);
+            this.btnStatus.Size = new System.Drawing.Size(981, 34);
             this.btnStatus.TabIndex = 4;
             this.btnStatus.Text = "已连接管理中心";
             this.btnStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,22 +160,41 @@
             this.cap一键报修.Location = new System.Drawing.Point(474, 82);
             this.cap一键报修.Margin = new System.Windows.Forms.Padding(4);
             this.cap一键报修.Name = "cap一键报修";
-            this.cap一键报修.Size = new System.Drawing.Size(496, 564);
+            this.cap一键报修.Size = new System.Drawing.Size(496, 652);
             this.cap一键报修.TabIndex = 3;
             this.cap一键报修.Text = "打开微信扫码一键报修";
             // 
             // cap基本信息
             // 
             this.cap基本信息.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.cap基本信息.Controls.Add(this.btnRestartVNC);
             this.cap基本信息.Controls.Add(this.btnCutScreen);
             this.cap基本信息.Controls.Add(this.btnHelp);
             this.cap基本信息.Controls.Add(this.txtRich);
             this.cap基本信息.Location = new System.Drawing.Point(4, 82);
             this.cap基本信息.Margin = new System.Windows.Forms.Padding(4);
             this.cap基本信息.Name = "cap基本信息";
-            this.cap基本信息.Size = new System.Drawing.Size(460, 564);
+            this.cap基本信息.Size = new System.Drawing.Size(460, 652);
             this.cap基本信息.TabIndex = 2;
             this.cap基本信息.Text = "基本信息";
+            // 
+            // btnRestartVNC
+            // 
+            this.btnRestartVNC.BackColor = System.Drawing.Color.Transparent;
+            this.btnRestartVNC.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnRestartVNC.DownBack = null;
+            this.btnRestartVNC.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRestartVNC.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRestartVNC.Location = new System.Drawing.Point(4, 512);
+            this.btnRestartVNC.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestartVNC.MouseBack = null;
+            this.btnRestartVNC.Name = "btnRestartVNC";
+            this.btnRestartVNC.NormlBack = null;
+            this.btnRestartVNC.Size = new System.Drawing.Size(276, 54);
+            this.btnRestartVNC.TabIndex = 6;
+            this.btnRestartVNC.Text = "重启远程服务";
+            this.btnRestartVNC.UseVisualStyleBackColor = false;
+            this.btnRestartVNC.Click += new System.EventHandler(this.btnRestartVNC_Click);
             // 
             // btnCutScreen
             // 
@@ -183,7 +203,7 @@
             this.btnCutScreen.DownBack = null;
             this.btnCutScreen.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCutScreen.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnCutScreen.Location = new System.Drawing.Point(4, 464);
+            this.btnCutScreen.Location = new System.Drawing.Point(4, 449);
             this.btnCutScreen.Margin = new System.Windows.Forms.Padding(4);
             this.btnCutScreen.MouseBack = null;
             this.btnCutScreen.Name = "btnCutScreen";
@@ -204,7 +224,7 @@
             this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHelp.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHelp.Location = new System.Drawing.Point(8, 387);
+            this.btnHelp.Location = new System.Drawing.Point(8, 382);
             this.btnHelp.Margin = new System.Windows.Forms.Padding(4);
             this.btnHelp.MouseBack = null;
             this.btnHelp.Name = "btnHelp";
@@ -261,7 +281,7 @@
             this.subTab设备管理.Location = new System.Drawing.Point(0, 36);
             this.subTab设备管理.Margin = new System.Windows.Forms.Padding(4);
             this.subTab设备管理.Name = "subTab设备管理";
-            this.subTab设备管理.Size = new System.Drawing.Size(983, 772);
+            this.subTab设备管理.Size = new System.Drawing.Size(981, 854);
             this.subTab设备管理.TabIndex = 1;
             this.subTab设备管理.TabItemImage = null;
             this.subTab设备管理.Text = "设备管理";
@@ -317,7 +337,7 @@
             this.subTab帮助.Location = new System.Drawing.Point(0, 36);
             this.subTab帮助.Margin = new System.Windows.Forms.Padding(4);
             this.subTab帮助.Name = "subTab帮助";
-            this.subTab帮助.Size = new System.Drawing.Size(983, 772);
+            this.subTab帮助.Size = new System.Drawing.Size(981, 854);
             this.subTab帮助.TabIndex = 2;
             this.subTab帮助.TabItemImage = null;
             this.subTab帮助.Text = "帮助";
@@ -361,7 +381,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 846);
+            this.ClientSize = new System.Drawing.Size(997, 928);
             this.Controls.Add(this.Tabmain);
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -406,6 +426,7 @@
         private CCWin.SkinControl.SkinButton btnReportRecord;
         private CCWin.SkinControl.SkinButton btnReport;
         private CCWin.SkinControl.SkinButton btnCutScreen;
+        private CCWin.SkinControl.SkinButton btnRestartVNC;
     }
 }
 
