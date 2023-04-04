@@ -205,7 +205,6 @@ class Device extends AdminController
         if(!empty($rest))
         {
             $info = [
-
                 'host'=>Env::get('proxy.host_ip','10.87.230.199'),
                 'port'=>Env::get('proxy.host_port','6080'),
                 'path'=>'websockify/?token='.$rest['UUID'],
@@ -245,7 +244,8 @@ class Device extends AdminController
                 $msg .=$cmdRest['msg'];
                 $successFlag=$cmdRest['code']==1?true:false;
 
-            }elseif($post['type']=='3')
+            }
+            elseif($post['type']=='3')
             {
                 //执行cmd命令
                 if($post['command']=='')return show(0,'关闭程序进程名称不能为空！');

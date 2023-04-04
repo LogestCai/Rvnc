@@ -200,6 +200,19 @@ namespace DevManager
 
         }
 
+        public static void restartVNCForce()
+        {
+            if (BasComm.ServiceExists("tvnserver"))
+            {
+                BasComm.restartVNC();
+            }
+            else
+            {
+                BasComm.killProcessByPort(5901);
+                BasComm.restartVNCApp();
+            }
+        }
+
         public static bool ServiceExists(string serverName)
         {
             return WinService.ServicesExists(serverName);

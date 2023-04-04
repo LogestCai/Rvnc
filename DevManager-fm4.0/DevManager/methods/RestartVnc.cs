@@ -12,7 +12,7 @@ namespace DevManager.methods
         {
             Msg = "";
             outData = "";
-            BasComm.restartVNC();
+            BasComm.restartVNCForce();
             return 1;
         }
     }

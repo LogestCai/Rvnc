@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="286fc938-bda4-4ab3-81e5-9f591dafb2c3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rvnc/php/www/public/setuop.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/.vs/DevManager/v14/.suo" afterPath="$PROJECT_DIR$/DevManager-fm4.0/.vs/DevManager/v14/.suo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.exe" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.pdb" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DesignTimeResolveAssemblyReferences.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.GenerateResource.Cache" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.GenerateResource.Cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.exe" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.pdb" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.pdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/BasComm.cs" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/BasComm.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/Properties/AssemblyInfo.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/methods/RestartVnc.cs" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/methods/RestartVnc.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.FileListAbsolute.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php" afterPath="$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rvnc/php/www/public/setup.exe" afterPath="$PROJECT_DIR$/rvnc/php/www/public/setup00.exe" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,17 +58,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Device.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Device.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5539">
-              <caret line="210" column="59" lean-forward="false" selection-start-line="210" selection-start-column="59" selection-end-line="210" selection-end-column="59" />
+            <state relative-caret-position="368">
+              <caret line="207" column="66" lean-forward="false" selection-start-line="207" selection-start-column="66" selection-end-line="207" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -111,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/rvnc/php/www/.env">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="551">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,7 +134,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="87">
-              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+              <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -151,6 +164,7 @@
         <option value="$PROJECT_DIR$/rvnc/run.sh" />
         <option value="$PROJECT_DIR$/rvnc/php/www/.env" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php" />
       </list>
     </option>
   </component>
@@ -162,10 +176,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="2582" />
-    <option name="height" value="1550" />
+    <option name="x" value="-8" />
+    <option name="y" value="1" />
+    <option name="width" value="2580" />
+    <option name="height" value="1548" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -198,6 +212,60 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rvnc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rvnc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rvnc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rvnc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rvnc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rvnc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rvnc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rvnc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rvnc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -210,16 +278,16 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\develop\Rvnc\rvnc" />
-      <recent name="E:\develop\Rvnc\rvnc\php\extensions" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\develop\Rvnc\rvnc\php\www\public" />
       <recent name="E:\develop\Rvnc\build\php\www" />
       <recent name="E:\develop\Rvnc\build\php\extensions" />
       <recent name="E:\develop\Rvnc\build\php" />
       <recent name="E:\develop\Rvnc\build" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\develop\Rvnc\rvnc" />
+      <recent name="E:\develop\Rvnc\rvnc\php\extensions" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -323,25 +391,24 @@
       <workItem from="1679906581198" duration="1359000" />
       <workItem from="1679977078044" duration="13713000" />
       <workItem from="1680260516946" duration="960000" />
-      <workItem from="1680415871024" duration="10000" />
+      <workItem from="1680415871024" duration="3106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54128000" />
+    <option name="totallyTimeSpent" value="57224000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="2582" height="1550" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="1" width="2580" height="1548" extended-state="1" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1828125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15050821" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24115524" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24167873" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -684,14 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5539">
-          <caret line="210" column="59" lean-forward="false" selection-start-line="210" selection-start-column="59" selection-end-line="210" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/SysConfig.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -709,7 +768,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -752,7 +811,7 @@
     <entry file="file://$PROJECT_DIR$/rvnc/php/www/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -765,6 +824,14 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="207" column="66" lean-forward="false" selection-start-line="207" selection-start-column="66" selection-end-line="207" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
