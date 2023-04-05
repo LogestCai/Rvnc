@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="286fc938-bda4-4ab3-81e5-9f591dafb2c3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rvnc/php/www/public/setuop.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/.vs/DevManager/v14/.suo" afterPath="$PROJECT_DIR$/DevManager-fm4.0/.vs/DevManager/v14/.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.exe" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.pdb" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/bin/Debug/DevManager.pdb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/RVNC客户端自定义打包方法.md" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DesignTimeResolveAssemblyReferences.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.GenerateResource.Cache" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.GenerateResource.Cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.exe" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.pdb" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.pdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/BasComm.cs" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/BasComm.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/Properties/AssemblyInfo.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/methods/RestartVnc.cs" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/methods/RestartVnc.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DevManager.csproj.FileListAbsolute.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php" afterPath="$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/rvnc/php/www/public/setup.exe" afterPath="$PROJECT_DIR$/rvnc/php/www/public/setup00.exe" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
-              <caret line="207" column="66" lean-forward="false" selection-start-line="207" selection-start-column="66" selection-end-line="207" selection-end-column="66" />
+              <caret line="207" column="65" lean-forward="true" selection-start-line="207" selection-start-column="65" selection-end-line="207" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -176,8 +164,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="1" />
+    <option name="x" value="-2785" />
+    <option name="y" value="604" />
     <option name="width" value="2580" />
     <option name="height" value="1548" />
   </component>
@@ -236,33 +224,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rvnc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rvnc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rvnc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rvnc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
+              <option name="myItemId" value="DevManager-fm4.0" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -279,11 +241,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\develop\Rvnc\rvnc\php\www\public\newUpdate" />
       <recent name="F:\develop\Rvnc\rvnc\php\www\public" />
       <recent name="E:\develop\Rvnc\build\php\www" />
       <recent name="E:\develop\Rvnc\build\php\extensions" />
       <recent name="E:\develop\Rvnc\build\php" />
-      <recent name="E:\develop\Rvnc\build" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\develop\Rvnc\rvnc" />
@@ -391,15 +353,15 @@
       <workItem from="1679906581198" duration="1359000" />
       <workItem from="1679977078044" duration="13713000" />
       <workItem from="1680260516946" duration="960000" />
-      <workItem from="1680415871024" duration="3106000" />
+      <workItem from="1680415871024" duration="6010000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57224000" />
+    <option name="totallyTimeSpent" value="60128000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="1" width="2580" height="1548" extended-state="1" />
+    <frame x="-2785" y="604" width="2580" height="1548" extended-state="0" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15050821" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -830,7 +792,7 @@
     <entry file="file://$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
-          <caret line="207" column="66" lean-forward="false" selection-start-line="207" selection-start-column="66" selection-end-line="207" selection-end-column="66" />
+          <caret line="207" column="65" lean-forward="true" selection-start-line="207" selection-start-column="65" selection-end-line="207" selection-end-column="65" />
           <folding />
         </state>
       </provider>
