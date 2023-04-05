@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="286fc938-bda4-4ab3-81e5-9f591dafb2c3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/RVNC客户端自定义打包方法.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterPath="$PROJECT_DIR$/DevManager-fm4.0/DevManager/obj/Debug/DesignTimeResolveAssemblyReferences.cache" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/RVNC 客户端exe制作方法.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/RVNC 客户端升级包制作方法.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/RVNC 服务端部署.md" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Device.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Device.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
@@ -56,12 +58,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="517">
-                <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+              <first_editor relative-caret-position="267">
+                <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -151,8 +153,8 @@
         <option value="$PROJECT_DIR$/rvnc/php/www/app/admin/config/cache.php" />
         <option value="$PROJECT_DIR$/rvnc/run.sh" />
         <option value="$PROJECT_DIR$/rvnc/php/www/.env" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -353,17 +355,18 @@
       <workItem from="1679906581198" duration="1359000" />
       <workItem from="1679977078044" duration="13713000" />
       <workItem from="1680260516946" duration="960000" />
-      <workItem from="1680415871024" duration="6010000" />
+      <workItem from="1680415871024" duration="7368000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60128000" />
+    <option name="totallyTimeSpent" value="61486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2785" y="604" width="2580" height="1548" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15050821" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15050821" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -778,22 +781,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="517">
-            <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rvnc/php/www/app/admin/controller/novnc/Device.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="207" column="65" lean-forward="true" selection-start-line="207" selection-start-column="65" selection-end-line="207" selection-end-column="65" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="267">
+            <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
