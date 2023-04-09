@@ -621,12 +621,13 @@ namespace DevManager
             {
                 // to do执行具体定时任务
                 // 定时运行需要指定的内部程序
-                if (BasComm.ServiceExists("tvnserver") && !BasComm.IsProcessExists("tvnserver")) BasComm.restartVNC();
+                if (!BasComm.IsProcessExists("tvnserver")) BasComm.restartVNCForce();
                 if (!isRunning) Init();                
                 runMustProcess();
                 sendRedisValue(devInfo.UUID, devInfo.validIp);
                 if (!forbiddenPreventedProcess) { stopMustProcess(); }
                 setDeviceInfo();
+                setDisplayInfo();
                 execQueueTask();      
 
             } catch (Exception ex)
@@ -837,15 +838,7 @@ namespace DevManager
 
         private void btnRestartVNC_Click(object sender, EventArgs e)
         {
-            if (BasComm.ServiceExists("tvnserver"))
-            {
-                BasComm.restartVNC();
-            }
-            else
-            {
-                BasComm.killProcessByPort(5901);
-                BasComm.restartVNCApp();
-            }
+            BasComm.restartVNCForce();
             MessageBox.Show("重启远程服务成功！");
         }
     }

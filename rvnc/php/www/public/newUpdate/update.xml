@@ -8,9 +8,9 @@
   <PromptUserBeforeAutomaticUpgrade>true</PromptUserBeforeAutomaticUpgrade>
   <AutoCloseSucceedWindow>true</AutoCloseSucceedWindow>
   <Package>795df8309a594c8e87a53ba7087fa86c.zip</Package>
-  <MD5>DAA9F75E45F2F3952B050C0A695D981F</MD5>
+  <MD5>043971AFCF3DAFDD92738C87819D2C8E</MD5>
   <DeleteMethod>None</DeleteMethod>
-  <PackageSize>4262947</PackageSize>
+  <PackageSize>3869715</PackageSize>
   <ForceUpdate>true</ForceUpdate>
   <Packages>
     <PackageInfo>
@@ -73,84 +73,14 @@
       <FilePath>DevManager.exe</FilePath>
       <FileSize>761856</FileSize>
       <Version>1.0.0.2</Version>
-      <PackageHash>4F572E03BAC12F16CF992D798A70341A</PackageHash>
+      <PackageHash>792E12917EA7FDEF5BE9E117FCC7F4E6</PackageHash>
       <PackageName>423f5f8d08d44530971032d65b25e0d1.zip</PackageName>
-      <PackageSize>69442</PackageSize>
+      <PackageSize>69448</PackageSize>
       <Method>VersionCompare</Method>
       <VerificationLevel>Size Hash</VerificationLevel>
-      <FileHash>A9D71B8F7EDA2E343E3E7E06E581B1AC</FileHash>
+      <FileHash>4CC7B1F2ACEA882D204A7AE85C9916E3</FileHash>
       <Files>
         <string>DevManager.exe</string>
-      </Files>
-    </PackageInfo>
-    <PackageInfo>
-      <FilePath>DevManager.exe.config</FilePath>
-      <FileSize>184</FileSize>
-      <Version>0.0.0.0</Version>
-      <PackageHash>C5F729C81D60BBA7554F2BF07FFA1573</PackageHash>
-      <PackageName>d4d65d32f5dd4245be78373f7b0da542.zip</PackageName>
-      <PackageSize>272</PackageSize>
-      <Method>VersionCompare</Method>
-      <VerificationLevel>Size Hash</VerificationLevel>
-      <FileHash>516E7026603FB976EE86C4E020C64C70</FileHash>
-      <Files>
-        <string>DevManager.exe.config</string>
-      </Files>
-    </PackageInfo>
-    <PackageInfo>
-      <FilePath>DevManager.pdb</FilePath>
-      <FileSize>161280</FileSize>
-      <Version>0.0.0.0</Version>
-      <PackageHash>9FD017FF62A43D782FB3870344186625</PackageHash>
-      <PackageName>cb2a5da4b4734dd38f93b5a9284c5666.zip</PackageName>
-      <PackageSize>43602</PackageSize>
-      <Method>VersionCompare</Method>
-      <VerificationLevel>Size Hash</VerificationLevel>
-      <FileHash>528CDB794FB28843BD8B86C2059AF673</FileHash>
-      <Files>
-        <string>DevManager.pdb</string>
-      </Files>
-    </PackageInfo>
-    <PackageInfo>
-      <FilePath>DevManager.vshost.exe</FilePath>
-      <FileSize>22696</FileSize>
-      <Version>14.0.23107.0</Version>
-      <PackageHash>E23C9E5FE93C507C813564B3AA73CDE8</PackageHash>
-      <PackageName>e43abba0d28744b8891dda53cfb18f14.zip</PackageName>
-      <PackageSize>13461</PackageSize>
-      <Method>VersionCompare</Method>
-      <VerificationLevel>Size Hash</VerificationLevel>
-      <FileHash>5A968502B84A268CA84018F1A9F6BB59</FileHash>
-      <Files>
-        <string>DevManager.vshost.exe</string>
-      </Files>
-    </PackageInfo>
-    <PackageInfo>
-      <FilePath>DevManager.vshost.exe.config</FilePath>
-      <FileSize>184</FileSize>
-      <Version>0.0.0.0</Version>
-      <PackageHash>42B355AE01EF946BE2336A8473F44807</PackageHash>
-      <PackageName>21339b7fddd14519924db94779077ae3.zip</PackageName>
-      <PackageSize>286</PackageSize>
-      <Method>VersionCompare</Method>
-      <VerificationLevel>Size Hash</VerificationLevel>
-      <FileHash>516E7026603FB976EE86C4E020C64C70</FileHash>
-      <Files>
-        <string>DevManager.vshost.exe.config</string>
-      </Files>
-    </PackageInfo>
-    <PackageInfo>
-      <FilePath>DevManager.vshost.exe.manifest</FilePath>
-      <FileSize>490</FileSize>
-      <Version>0.0.0.0</Version>
-      <PackageHash>965EA2C31D6A0EC79CA9A6CCB8EE2AB2</PackageHash>
-      <PackageName>74e2c788a3f3436c83ce6f9817cb0d0e.zip</PackageName>
-      <PackageSize>420</PackageSize>
-      <Method>VersionCompare</Method>
-      <VerificationLevel>Size Hash</VerificationLevel>
-      <FileHash>A19A2658BA69030C6AC9D11FD7D7E3C1</FileHash>
-      <Files>
-        <string>DevManager.vshost.exe.manifest</string>
       </Files>
     </PackageInfo>
     <PackageInfo>
@@ -224,20 +154,6 @@
       </Files>
     </PackageInfo>
     <PackageInfo>
-      <FilePath>PrScrn00.dll</FilePath>
-      <FileSize>1280712</FileSize>
-      <Version>8.0.503.400</Version>
-      <PackageHash>A6328849F8E3AEDAF882BFFE183296FA</PackageHash>
-      <PackageName>ee7a885667384b9b94cb7eace13c2680.zip</PackageName>
-      <PackageSize>335329</PackageSize>
-      <Method>VersionCompare</Method>
-      <VerificationLevel>Size Hash</VerificationLevel>
-      <FileHash>A22B15DBC5C085589EF70779925F7F50</FileHash>
-      <Files>
-        <string>PrScrn00.dll</string>
-      </Files>
-    </PackageInfo>
-    <PackageInfo>
       <FilePath>SimpleUpdater.dll</FilePath>
       <FileSize>387072</FileSize>
       <Version>4.3.0.0</Version>
@@ -255,7 +171,7 @@
       <FilePath>SysConfig.ini</FilePath>
       <FileSize>252</FileSize>
       <Version>0.0.0.0</Version>
-      <PackageHash>49097D8ABDC3FE472E7D3C5505B8FB48</PackageHash>
+      <PackageHash>A8126C689C5A23ACA4FCAFD8EFB8BC71</PackageHash>
       <PackageName>392c3339768a4afbbebe3344617fb5f1.zip</PackageName>
       <PackageSize>327</PackageSize>
       <Method>VersionCompare</Method>
